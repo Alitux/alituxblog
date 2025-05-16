@@ -1,4 +1,6 @@
-baseURL = 'https://alitux.com.ar/'
+baseURL = "https://alitux.github.io/alituxblog/"
+relativeURLs = true
+canonifyURLs = true
 languageCode = 'es'
 title = 'Alitux'
 theme = 'terminal'

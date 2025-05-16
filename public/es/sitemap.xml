@@ -2,84 +2,93 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://alitux.github.io/alituxblog/</loc>
     <lastmod>2025-05-16T12:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/"
+                href="https://alitux.github.io/alituxblog/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/"
+                href="https://alitux.github.io/alituxblog/"
                 />
   </url><url>
-    <loc>http://localhost:1313/contacto/</loc>
+    <loc>https://alitux.github.io/alituxblog/contacto/</loc>
     <lastmod>2025-05-16T12:00:00-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/acerca-de/</loc>
+    <loc>https://alitux.github.io/alituxblog/acerca-de/</loc>
     <lastmod>2025-05-16T11:45:00-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cv/</loc>
+    <loc>https://alitux.github.io/alituxblog/cv/</loc>
     <lastmod>2025-05-16T11:43:56-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cloudflare/</loc>
+    <loc>https://alitux.github.io/alituxblog/tags/cloudflare/</loc>
     <lastmod>2024-11-12T11:19:13-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://alitux.github.io/alituxblog/posts/</loc>
     <lastmod>2024-11-12T11:19:13-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/raspberry-pi/</loc>
+    <loc>https://alitux.github.io/alituxblog/tags/raspberry-pi/</loc>
     <lastmod>2024-11-12T11:19:13-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://alitux.github.io/alituxblog/tags/</loc>
     <lastmod>2024-11-12T11:19:13-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/"
+                href="https://alitux.github.io/alituxblog/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/tags/"
+                href="https://alitux.github.io/alituxblog/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/posts/tuneles-cloudflare-raspberry-pi/</loc>
+    <loc>https://alitux.github.io/alituxblog/posts/tuneles-cloudflare-raspberry-pi/</loc>
     <lastmod>2024-11-12T11:19:13-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/django/</loc>
+    <loc>https://alitux.github.io/alituxblog/tags/django/</loc>
     <lastmod>2024-01-13T11:19:13-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/usuarios-unicos-django/</loc>
+    <loc>https://alitux.github.io/alituxblog/posts/usuarios-unicos-django/</loc>
     <lastmod>2024-01-13T11:19:13-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/python/</loc>
+    <loc>https://alitux.github.io/alituxblog/tags/python/</loc>
     <lastmod>2024-01-13T11:19:13-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/cambiar-titulo-tab-odoo15/</loc>
+    <loc>https://alitux.github.io/alituxblog/posts/cambiar-titulo-tab-odoo15/</loc>
     <lastmod>2023-11-27T12:19:13-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/docker/</loc>
+    <loc>https://alitux.github.io/alituxblog/tags/docker/</loc>
     <lastmod>2023-11-27T12:19:13-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/odoo/</loc>
+    <loc>https://alitux.github.io/alituxblog/tags/odoo/</loc>
     <lastmod>2023-11-27T12:19:13-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/sysadmin/</loc>
+    <loc>https://alitux.github.io/alituxblog/tags/sysadmin/</loc>
     <lastmod>2023-11-27T12:19:13-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://alitux.github.io/alituxblog/tags/markdown/</loc>
+    <lastmod>2023-11-07T10:19:13-03:00</lastmod>
+  </url><url>
+    <loc>https://alitux.github.io/alituxblog/posts/parsear-texto-python-markdownv2-telegram/</loc>
+    <lastmod>2023-11-07T10:19:13-03:00</lastmod>
+  </url><url>
+    <loc>https://alitux.github.io/alituxblog/tags/telegram/</loc>
+    <lastmod>2023-11-07T10:19:13-03:00</lastmod>
+  </url><url>
+    <loc>https://alitux.github.io/alituxblog/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/categories/"
+                href="https://alitux.github.io/alituxblog/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/categories/"
+                href="https://alitux.github.io/alituxblog/categories/"
                 />
   </url>
 </urlset>
