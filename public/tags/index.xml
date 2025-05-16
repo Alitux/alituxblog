@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Alitux</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Alitux</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <copyright>Copyleft 2025. Nothing reserved. Feel free to share and share alike.</copyright>
+    <lastBuildDate>Tue, 12 Nov 2024 11:19:13 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloudflare</title>
+      <link>http://localhost:1313/tags/cloudflare/</link>
+      <pubDate>Tue, 12 Nov 2024 11:19:13 -0300</pubDate>
+      <guid>http://localhost:1313/tags/cloudflare/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Raspberry Pi</title>
+      <link>http://localhost:1313/tags/raspberry-pi/</link>
+      <pubDate>Tue, 12 Nov 2024 11:19:13 -0300</pubDate>
+      <guid>http://localhost:1313/tags/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Django</title>
+      <link>http://localhost:1313/tags/django/</link>
+      <pubDate>Sat, 13 Jan 2024 11:19:13 -0300</pubDate>
+      <guid>http://localhost:1313/tags/django/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Sat, 13 Jan 2024 11:19:13 -0300</pubDate>
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>http://localhost:1313/tags/docker/</link>
+      <pubDate>Mon, 27 Nov 2023 12:19:13 -0300</pubDate>
+      <guid>http://localhost:1313/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Odoo</title>
+      <link>http://localhost:1313/tags/odoo/</link>
+      <pubDate>Mon, 27 Nov 2023 12:19:13 -0300</pubDate>
+      <guid>http://localhost:1313/tags/odoo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sysadmin</title>
+      <link>http://localhost:1313/tags/sysadmin/</link>
+      <pubDate>Mon, 27 Nov 2023 12:19:13 -0300</pubDate>
+      <guid>http://localhost:1313/tags/sysadmin/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

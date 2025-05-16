@@ -1,0 +1,55 @@
+/* Fondo negro, texto verde fosforescente */
+
+:root {
+    --background: #000000 !important;
+    --foreground: #00ff00 !;
+    --accent: #00ff00 !important;
+
+    --first-tone: #00ff00 !important;
+    --second-tone: #00ff00 !important;
+    --comment: #00ff00 !important;
+}
+
+
+/* Enlaces verdes */
+a {
+    color: #00ff00;
+    text-decoration: underline;
+}
+
+/* Navegación */
+nav,
+header,
+footer {
+    background-color: #000000;
+    color: #00ff00;
+    border-color: #00ff00;
+}
+
+/* Titulares */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #00ff00;
+}
+
+/* Bloques de código */
+pre,
+code {
+    background-color: #000000;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+}
+
+/* Bordes y detalles */
+hr {
+    border-color: #00ff00;
+}
+
+.tag,
+.categories {
+    color: #00ff00;
+}

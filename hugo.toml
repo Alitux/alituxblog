@@ -1,0 +1,132 @@
+baseURL = 'https://alitux.com.ar/'
+languageCode = 'es'
+title = 'Alitux'
+theme = 'terminal'
+copyright = 'Copyleft 2025. Nothing reserved. Feel free to share and share alike.'
+pagination.pagerSize = 10
+defaultContentLanguage = "es"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+# Required for Chroma and the custom syntax highlighting.
+[markup.highlight]
+  noClasses = false
+
+[params]
+
+  themeColor = "terminal-retro"
+  customCSS = ["css/terminal-retro.css"]
+  
+
+  # dir name of your main content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "posts"
+
+  # if you set this to 0, only submenu trigger will be visible
+  showMenuItems = 5
+
+  # show selector to switch language
+  showLanguageSelector = true
+
+  # set theme to full screen width
+  fullWidthTheme = true
+
+  # center theme with default width
+  centerTheme = true
+
+  # if your resource directory contains an image called `cover.(jpg|png|webp)`,
+  # then the file will be used as a cover automatically.
+  # With this option you don't have to put the `cover` param in a front-matter.
+  autoCover = false
+
+  showLastUpdated = true
+
+
+  readingTime =  true
+
+
+
+[params.twitter]
+  # set Twitter handles for Twitter cards
+  # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
+  # do not include @
+  creator = ""
+  site = ""
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    contentDir = "content/en"
+    title = "Alitux's Blog"
+    
+    [languages.en.params]
+      subtitle = "Python, Odoo, Linux, Free Software, Open Source, DevOps" 
+      owner = "Alitux"
+      keywords = "devops, docker, python, odoo, linux, free software, opensource"
+      copyright = "Copyleft 2025. Nothing reserved. Feel free to share."
+      menuMore = "Show more"
+      readMore = "Read more"
+      readOtherPosts = "Read other posts"
+      newerPosts = "Newer posts"
+      olderPosts = "Older posts"
+      missingContentMessage = "Page not found..."
+      missingBackButtonLabel = "Back to home page"
+      minuteReadingTime = "min read"
+      words = "words"
+
+      [languages.en.params.logo]
+        logoText = "Alitux"
+        logoHomeLink = "/"
+
+      [languages.en.menu]
+        [[languages.en.menu.main]]
+          identifier = "about"
+          name = "About"
+          url = "/en/about"
+          
+        [[languages.en.menu.main]]
+          identifier = "contact"
+          name = "Contact"
+          url = "/en/contact"  
+
+  [languages.es]
+    languageName = "Español"
+    contentDir = "content/es"
+    title = "Alitux"
+
+    [languages.es.params]
+      subtitle = "Python, Odoo, Linux, Free Software, Open Source, devops"
+      owner = "Alitux"
+      keywords = "devops, docker, python, odoo, linux, free software, opensource"
+      copyright = "Copyleft 2025. Nada está reservado acá. Sentite feliz de compartir"
+      dateFormat = "02-01-2006"
+      menuMore = "Ver más"
+      readMore = "Leer más"
+      readOtherPosts = "Leer otros posteos"
+      newerPosts = "Publicaciones más recientemente"
+      olderPosts = "Publicaciones"
+      missingContentMessage = "Página no encontrada..."
+      missingBackButtonLabel = "Volver a la página principal"
+      minuteReadingTime = "minutos de lectura"
+      words = "palabras"
+
+      [languages.es.params.logo]
+        logoText = "Alitux"
+        logoHomeLink = "/"
+
+    [languages.es.menu]
+   
+      [[languages.es.menu.main]]
+          identifier = "acercade"
+          name = "Acerca de"
+          url = "/acerca-de"
+      [[languages.es.menu.main]]
+          identifier = "cv"
+          name = "CV"
+          url = "/cv"          
+      [[languages.es.menu.main]]
+          identifier = "contacto"
+          name = "Contacto"
+          url = "/contacto"          

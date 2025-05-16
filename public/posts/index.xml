@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Alitux</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Alitux</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <copyright>Copyleft 2025. Nothing reserved. Feel free to share and share alike.</copyright>
+    <lastBuildDate>Tue, 12 Nov 2024 11:19:13 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tuneles Cloudflare Raspberry Pi</title>
+      <link>http://localhost:1313/posts/tuneles-cloudflare-raspberry-pi/</link>
+      <pubDate>Tue, 12 Nov 2024 11:19:13 -0300</pubDate>
+      <guid>http://localhost:1313/posts/tuneles-cloudflare-raspberry-pi/</guid>
+      <description>&lt;p&gt;Hace tiempo que vengo pensando como exponer a Internet servicios alojados localmente. En su momento hice un injerto con wireguard y una VPS que logró su cometido a costa de un rendimiento espantoso.&lt;/p&gt;&#xA;&lt;p&gt;Hace unos días se me ocurrió probar usando los túneles de Cloudflare y quedé gratamente sorprendido por la perfo y la sencillez. Acá les paso un Tuto tomando como modelo una Raspberry Pi 3 con Raspberry Pi OS en la que funciona un nextcloud sobre Docker. Acá les dejo el &lt;a href=&#34;https://gist.github.com/Alitux/c21f175a42ebddf7e838437570f5041d&#34;&gt;compose&lt;/a&gt; por si les interesa pero no lo hago parte del tuto porque excede el alcance&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nombres de Usuarios Únicos en Django</title>
+      <link>http://localhost:1313/posts/usuarios-unicos-django/</link>
+      <pubDate>Sat, 13 Jan 2024 11:19:13 -0300</pubDate>
+      <guid>http://localhost:1313/posts/usuarios-unicos-django/</guid>
+      <description>&lt;p&gt;La creación de nombres de usuarios autogenerados en Django no está implementada por defecto. Es por eso que escribí una simple función, que valiéndose de un CustomUser (No uso User por defecto ya que tengo un modelo personalizado que hereda sus propiedades desde AbstractUser) y tomando como entrada el primer nombre genera nombres de usuarios únicos no predecibles. Si bien no evita ataques por fuerza bruta, mitiga el uso de diccionarios con patrones comunes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cambiar Título del Tab en Odoo 15</title>
+      <link>http://localhost:1313/posts/cambiar-titulo-tab-odoo15/</link>
+      <pubDate>Mon, 27 Nov 2023 12:19:13 -0300</pubDate>
+      <guid>http://localhost:1313/posts/cambiar-titulo-tab-odoo15/</guid>
+      <description>&lt;p&gt;Una cortita: Para cambiar el título «odoo» que aparece en el tab de Odoo y suponiendo que lo están corriendo en Docker, se debe ejecutar dentro del contenedor de Odoo:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

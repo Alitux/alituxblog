@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Es on Alitux</title>
+    <link>http://localhost:1313/es/</link>
+    <description>Recent content in Es on Alitux</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <copyright>Copyleft 2025. Nothing reserved. Feel free to share and share alike.</copyright>
+    <atom:link href="http://localhost:1313/es/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Odoo on Alitux</title>
+    <link>http://localhost:1313/tags/odoo/</link>
+    <description>Recent content in Odoo on Alitux</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <copyright>Copyleft 2025. Nothing reserved. Feel free to share and share alike.</copyright>
+    <lastBuildDate>Mon, 27 Nov 2023 12:19:13 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/odoo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cambiar Título del Tab en Odoo 15</title>
+      <link>http://localhost:1313/posts/cambiar-titulo-tab-odoo15/</link>
+      <pubDate>Mon, 27 Nov 2023 12:19:13 -0300</pubDate>
+      <guid>http://localhost:1313/posts/cambiar-titulo-tab-odoo15/</guid>
+      <description>&lt;p&gt;Una cortita: Para cambiar el título «odoo» que aparece en el tab de Odoo y suponiendo que lo están corriendo en Docker, se debe ejecutar dentro del contenedor de Odoo:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
