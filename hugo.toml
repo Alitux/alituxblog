@@ -1,4 +1,4 @@
-baseURL = "https://alitux.github.io/alituxblog/"
+baseURL = "https://alitux.com.ar/"
 relativeURLs = true
 canonifyURLs = true
 languageCode = 'es'
