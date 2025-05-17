@@ -13,7 +13,7 @@ date = "2025-05-16T12:00:00-03:00"
 
 Podés mandarme un correo a:
 
-**[alitux@disroot.org](mailto:alitux@disroot.org)**
+**[contacto@alitux.com.ar](mailto:contacto@alitux.com.ar)**
 
 ---
 

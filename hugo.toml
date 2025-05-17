@@ -30,7 +30,7 @@ defaultContentLanguage = "es"
   showMenuItems = 5
 
   # show selector to switch language
-  showLanguageSelector = true
+  showLanguageSelector = false
 
   # set theme to full screen width
   fullWidthTheme = true
@@ -122,13 +122,16 @@ defaultContentLanguage = "es"
    
       [[languages.es.menu.main]]
           identifier = "acercade"
-          name = "Acerca de"
+          name = "De mí"
           url = "/acerca-de"
+          weight = 1
       [[languages.es.menu.main]]
           identifier = "cv"
           name = "CV"
-          url = "/cv"          
+          url = "/cv"
+          weight = 2
       [[languages.es.menu.main]]
           identifier = "contacto"
           name = "Contacto"
           url = "/contacto"          
+          weight = 3

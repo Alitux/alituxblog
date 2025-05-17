@@ -53,3 +53,9 @@ hr {
 .categories {
     color: #00ff00;
 }
+
+.menu__dropdown {
+    min-width: 160px;
+    white-space: nowrap;
+    text-align: left;
+}
