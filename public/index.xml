@@ -2,60 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Alitux</title>
-    <link>http://localhost:1313/</link>
+    <link>https://alitux.com.ar/</link>
     <description>Recent content on Alitux</description>
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>Copyleft 2025. Nothing reserved. Feel free to share and share alike.</copyright>
     <lastBuildDate>Fri, 16 May 2025 12:00:00 -0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://alitux.com.ar/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contacto</title>
-      <link>http://localhost:1313/contacto/</link>
+      <link>https://alitux.com.ar/contacto/</link>
       <pubDate>Fri, 16 May 2025 12:00:00 -0300</pubDate>
-      <guid>http://localhost:1313/contacto/</guid>
+      <guid>https://alitux.com.ar/contacto/</guid>
       <description>&lt;h2 id=&#34;-contacto&#34;&gt;📬 Contacto&lt;/h2&gt;&#xA;&lt;p&gt;¿Querés ponerte en contacto conmigo? Ya sea para consultarme algo técnico, charlar sobre software libre, colaborar en un proyecto o simplemente saludar, estás más que invitado a escribirme.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;-email&#34;&gt;📧 Email&lt;/h3&gt;&#xA;&lt;p&gt;Podés mandarme un correo a:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;mailto:alitux@disroot.org&#34;&gt;alitux@disroot.org&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;-redes-y-comunidad&#34;&gt;💻 Redes y comunidad&lt;/h3&gt;&#xA;&lt;p&gt;También me podés encontrar en algunos espacios online:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;🐘 Mastodon: &lt;a href=&#34;https://mastodon.la/@alitux&#34;&gt;@alitux@mastodon.la&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;🧑‍💻 GitHub: &lt;a href=&#34;https://github.com/alitux&#34;&gt;github.com/alitux&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;💬 Telegram: &lt;a href=&#34;https://t.me/alitux&#34;&gt;t.me/alitux&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;💼 LinkedIn: &lt;a href=&#34;www.linkedin.com/in/alitux&#34;&gt;www.linkedin.com/in/alitux&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;Las ruinas no nos dan miedo. Sabemos que no vamos a heredar más que ruinas, (&amp;hellip;) Pero a nosotros no nos dan miedo las ruinas porque llevamos un mundo nuevo en nuestros corazones. Y ese mundo está creciendo en este instante.&amp;rdquo; &lt;strong&gt;Buenaventura Durruti&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Acerca de mí</title>
-      <link>http://localhost:1313/acerca-de/</link>
+      <link>https://alitux.com.ar/acerca-de/</link>
       <pubDate>Fri, 16 May 2025 11:45:00 -0300</pubDate>
-      <guid>http://localhost:1313/acerca-de/</guid>
+      <guid>https://alitux.com.ar/acerca-de/</guid>
       <description>&lt;h2 id=&#34;-hola-soy-alejandro-fábrega&#34;&gt;👋 ¡Hola! Soy Alejandro Fábrega&lt;/h2&gt;&#xA;&lt;p&gt;Desarrollador Python especializado en &lt;strong&gt;Django&lt;/strong&gt;, &lt;strong&gt;Odoo&lt;/strong&gt;, &lt;strong&gt;FastAPI&lt;/strong&gt; y &lt;strong&gt;Flask&lt;/strong&gt;, con experiencia como &lt;strong&gt;SysAdmin en Linux&lt;/strong&gt;, manejo de &lt;strong&gt;Git&lt;/strong&gt; y desarrollo de proyectos en &lt;strong&gt;IoT&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;También soy &lt;strong&gt;Ingeniero en Pesca&lt;/strong&gt;, nacido y criado en el fin del mundo 🌎: &lt;strong&gt;Ushuaia, Tierra del Fuego, Argentina&lt;/strong&gt;. Me apasiona el &lt;strong&gt;Software Libre y de Código Abierto&lt;/strong&gt; ❤️, como herramienta para la &lt;strong&gt;soberanía tecnológica&lt;/strong&gt; y la construcción colectiva de conocimiento.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Curriculum Vitae</title>
-      <link>http://localhost:1313/cv/</link>
+      <link>https://alitux.com.ar/cv/</link>
       <pubDate>Fri, 16 May 2025 11:43:56 -0300</pubDate>
-      <guid>http://localhost:1313/cv/</guid>
+      <guid>https://alitux.com.ar/cv/</guid>
       <description>&lt;h2 id=&#34;formación-académica&#34;&gt;Formación Académica&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;2007–2017&lt;/strong&gt;&lt;br&gt;&#xA;&lt;strong&gt;Ingeniero en Pesca&lt;/strong&gt; con especialización en Captura, Universidad Tecnológica Nacional, Regional Tierra del Fuego, Ushuaia, Argentina.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;2000-2003&lt;/strong&gt;&lt;br&gt;&#xA;&lt;strong&gt;Técnico en Hidráulica&lt;/strong&gt;, Escuela Técnica de Hidráulica N° 4-112 &amp;ldquo;Antonio Gurgui&amp;rdquo;, Las Heras, Mendoza, Argentina.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;experiencia-laboral&#34;&gt;Experiencia Laboral&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;2021 - Presente&lt;/strong&gt;&lt;br&gt;&#xA;Desarrollador Fullstack y Sysadmin, Plataformas Tecnológicas del Sur, Argentina.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;2022 - Presente&lt;/strong&gt;&lt;br&gt;&#xA;Instructor de Desarrollo de Software (DJANGO &amp;amp; Python), Punto Digital – Municipalidad de Ushuaia, Argentina.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;2024 - 2025&lt;/strong&gt;&lt;br&gt;&#xA;DevOps y SysAdmin, Quilsoft, Argentina.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tuneles Cloudflare Raspberry Pi</title>
-      <link>http://localhost:1313/posts/tuneles-cloudflare-raspberry-pi/</link>
+      <link>https://alitux.com.ar/posts/tuneles-cloudflare-raspberry-pi/</link>
       <pubDate>Tue, 12 Nov 2024 11:19:13 -0300</pubDate>
-      <guid>http://localhost:1313/posts/tuneles-cloudflare-raspberry-pi/</guid>
+      <guid>https://alitux.com.ar/posts/tuneles-cloudflare-raspberry-pi/</guid>
       <description>&lt;p&gt;Hace tiempo que vengo pensando como exponer a Internet servicios alojados localmente. En su momento hice un injerto con wireguard y una VPS que logró su cometido a costa de un rendimiento espantoso.&lt;/p&gt;&#xA;&lt;p&gt;Hace unos días se me ocurrió probar usando los túneles de Cloudflare y quedé gratamente sorprendido por la perfo y la sencillez. Acá les paso un Tuto tomando como modelo una Raspberry Pi 3 con Raspberry Pi OS en la que funciona un nextcloud sobre Docker. Acá les dejo el &lt;a href=&#34;https://gist.github.com/Alitux/c21f175a42ebddf7e838437570f5041d&#34;&gt;compose&lt;/a&gt; por si les interesa pero no lo hago parte del tuto porque excede el alcance&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nombres de Usuarios Únicos en Django</title>
-      <link>http://localhost:1313/posts/usuarios-unicos-django/</link>
+      <link>https://alitux.com.ar/posts/usuarios-unicos-django/</link>
       <pubDate>Sat, 13 Jan 2024 11:19:13 -0300</pubDate>
-      <guid>http://localhost:1313/posts/usuarios-unicos-django/</guid>
+      <guid>https://alitux.com.ar/posts/usuarios-unicos-django/</guid>
       <description>&lt;p&gt;La creación de nombres de usuarios autogenerados en Django no está implementada por defecto. Es por eso que escribí una simple función, que valiéndose de un CustomUser (No uso User por defecto ya que tengo un modelo personalizado que hereda sus propiedades desde AbstractUser) y tomando como entrada el primer nombre genera nombres de usuarios únicos no predecibles. Si bien no evita ataques por fuerza bruta, mitiga el uso de diccionarios con patrones comunes.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cambiar Título del Tab en Odoo 15</title>
-      <link>http://localhost:1313/posts/cambiar-titulo-tab-odoo15/</link>
+      <link>https://alitux.com.ar/posts/cambiar-titulo-tab-odoo15/</link>
       <pubDate>Mon, 27 Nov 2023 12:19:13 -0300</pubDate>
-      <guid>http://localhost:1313/posts/cambiar-titulo-tab-odoo15/</guid>
+      <guid>https://alitux.com.ar/posts/cambiar-titulo-tab-odoo15/</guid>
       <description>&lt;p&gt;Una cortita: Para cambiar el título «odoo» que aparece en el tab de Odoo y suponiendo que lo están corriendo en Docker, se debe ejecutar dentro del contenedor de Odoo:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/zopenerp: &amp;#34;Odoo&amp;#34;/zopenerp: &amp;#34;Tunuevotitulo&amp;#34;/&amp;#39;&lt;/span&gt; /usr/lib/python3/dist-packages/odoo/addons/web/static/src/webclient/webclient.js&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y si no queremos entrar al contenedor podemos hacer:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; -tiu root sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/zopenerp: &amp;#34;Odoo&amp;#34;/zopenerp: &amp;#34;Tunuevotitulo&amp;#34;/&amp;#39;&lt;/span&gt; /usr/lib/python3/dist-packages/odoo/addons/web/static/src/webclient/webclient.js&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;IMPORTANTE0:&lt;/strong&gt; No olvides en reemplazar Tunuevotitulo por el nombre quieras poner.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;IMPORTANTE1:&lt;/strong&gt; El cambio que no es permanente, esto quiere decir que si bajamos el contenedor y lo volvemos a levantar se vuelve todo a cero. Para hacer los cambios permanentes podríamos codear un addon o bien exponer toda la carpeta &lt;em&gt;/usr/lib/python3/dist-packages/odoo/addons/web/static/src/webclient&lt;/em&gt; como un volumen, pero no es una buena práctica y no lo sugiero mas que para safar o fines de desarrollo.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Parsear texto en Python para MarkdownV2 (API Telegram)</title>
-      <link>http://localhost:1313/posts/parsear-texto-python-markdownv2-telegram/</link>
+      <link>https://alitux.com.ar/posts/parsear-texto-python-markdownv2-telegram/</link>
       <pubDate>Tue, 07 Nov 2023 10:19:13 -0300</pubDate>
-      <guid>http://localhost:1313/posts/parsear-texto-python-markdownv2-telegram/</guid>
+      <guid>https://alitux.com.ar/posts/parsear-texto-python-markdownv2-telegram/</guid>
       <description>&lt;p&gt;Supongamos que se tiene el texto:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-code&#34; data-lang=&#34;code&#34;&gt;web#id=28&amp;amp;cids=1&amp;amp;menu_id=281&amp;amp;action=415&amp;amp;model=crm.lead&amp;amp;view_type=form&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Si uno intentara mandar el texto vía la API de Telegram la API respondería:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;ok&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;error_code&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;400&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Bad Request: can&amp;#39;t parse entities: Character &amp;#39;#&amp;#39; is reserved and must be escaped with the preceding &amp;#39;\\&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto es porque el carácter # es especial y hay que «escaparlo» o decirle a la API que no lo use para formatear texto. Para ello me armé la siguiente función que funciona de primera con todos los caracteres especiales:&lt;/p&gt;</description>
     </item>
   </channel>
