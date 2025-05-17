@@ -99,7 +99,7 @@ defaultContentLanguage = "es"
     title = "Alitux"
 
     [languages.es.params]
-      subtitle = "Python, Odoo, Linux, Free Software, Open Source, devops"
+      subtitle = "Python, Odoo, Linux y DevOps con filosofía de Software Libre"
       owner = "Alitux"
       keywords = "devops, docker, python, odoo, linux, free software, opensource"
       copyright = "Copyleft 2025. Nada está reservado acá. Sentite feliz de compartir"

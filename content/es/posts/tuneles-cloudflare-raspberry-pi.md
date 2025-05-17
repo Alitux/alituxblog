@@ -1,5 +1,5 @@
 +++
-title = "Tuneles Cloudflare Raspberry Pi"
+title = "Tuneles Cloudflare en una Raspberry Pi"
 date = "2024-11-12T11:19:13-03:00"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting
 author = "Alitux"
