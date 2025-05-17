@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Alitux&#39;s Blog</title>
-    <link>https://alitux.github.io/alituxblog/en/</link>
+    <link>http://localhost:1313/en/</link>
     <description>Recent content on Alitux&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyleft 2025. Nothing reserved. Feel free to share and share alike.</copyright>
     <lastBuildDate>Fri, 16 May 2025 11:45:00 -0300</lastBuildDate>
-    <atom:link href="https://alitux.github.io/alituxblog/en/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>https://alitux.github.io/alituxblog/en/about/</link>
+      <link>http://localhost:1313/en/about/</link>
       <pubDate>Fri, 16 May 2025 11:45:00 -0300</pubDate>
-      <guid>https://alitux.github.io/alituxblog/en/about/</guid>
+      <guid>http://localhost:1313/en/about/</guid>
       <description>&lt;h2 id=&#34;-hi-im-alejandro-fábrega&#34;&gt;👋 Hi! I&amp;rsquo;m Alejandro Fábrega&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;m a Python developer specialized in &lt;strong&gt;Django&lt;/strong&gt;, &lt;strong&gt;Odoo&lt;/strong&gt;, &lt;strong&gt;FastAPI&lt;/strong&gt;, and &lt;strong&gt;Flask&lt;/strong&gt;, with experience as a &lt;strong&gt;Linux SysAdmin&lt;/strong&gt;, &lt;strong&gt;Git&lt;/strong&gt; user, and &lt;strong&gt;IoT&lt;/strong&gt; tinkerer.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m also a &lt;strong&gt;Fishing Engineer&lt;/strong&gt; based at the end of the world 🌎 — &lt;strong&gt;Ushuaia, Tierra del Fuego, Argentina&lt;/strong&gt;. I&amp;rsquo;m passionate about &lt;strong&gt;Free and Open Source Software&lt;/strong&gt; ❤️, not just as a tool, but as a foundation for &lt;strong&gt;technological sovereignty&lt;/strong&gt; and collaborative knowledge.&lt;/p&gt;</description>
     </item>
   </channel>

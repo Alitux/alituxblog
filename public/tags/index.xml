@@ -2,74 +2,74 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Alitux</title>
-    <link>https://alitux.github.io/alituxblog/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Alitux</description>
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>Copyleft 2025. Nothing reserved. Feel free to share and share alike.</copyright>
     <lastBuildDate>Tue, 12 Nov 2024 11:19:13 -0300</lastBuildDate>
-    <atom:link href="https://alitux.github.io/alituxblog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cloudflare</title>
-      <link>https://alitux.github.io/alituxblog/tags/cloudflare/</link>
+      <link>http://localhost:1313/tags/cloudflare/</link>
       <pubDate>Tue, 12 Nov 2024 11:19:13 -0300</pubDate>
-      <guid>https://alitux.github.io/alituxblog/tags/cloudflare/</guid>
+      <guid>http://localhost:1313/tags/cloudflare/</guid>
       <description></description>
     </item>
     <item>
       <title>Raspberry Pi</title>
-      <link>https://alitux.github.io/alituxblog/tags/raspberry-pi/</link>
+      <link>http://localhost:1313/tags/raspberry-pi/</link>
       <pubDate>Tue, 12 Nov 2024 11:19:13 -0300</pubDate>
-      <guid>https://alitux.github.io/alituxblog/tags/raspberry-pi/</guid>
+      <guid>http://localhost:1313/tags/raspberry-pi/</guid>
       <description></description>
     </item>
     <item>
       <title>Django</title>
-      <link>https://alitux.github.io/alituxblog/tags/django/</link>
+      <link>http://localhost:1313/tags/django/</link>
       <pubDate>Sat, 13 Jan 2024 11:19:13 -0300</pubDate>
-      <guid>https://alitux.github.io/alituxblog/tags/django/</guid>
+      <guid>http://localhost:1313/tags/django/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>https://alitux.github.io/alituxblog/tags/python/</link>
+      <link>http://localhost:1313/tags/python/</link>
       <pubDate>Sat, 13 Jan 2024 11:19:13 -0300</pubDate>
-      <guid>https://alitux.github.io/alituxblog/tags/python/</guid>
+      <guid>http://localhost:1313/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>https://alitux.github.io/alituxblog/tags/docker/</link>
+      <link>http://localhost:1313/tags/docker/</link>
       <pubDate>Mon, 27 Nov 2023 12:19:13 -0300</pubDate>
-      <guid>https://alitux.github.io/alituxblog/tags/docker/</guid>
+      <guid>http://localhost:1313/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Odoo</title>
-      <link>https://alitux.github.io/alituxblog/tags/odoo/</link>
+      <link>http://localhost:1313/tags/odoo/</link>
       <pubDate>Mon, 27 Nov 2023 12:19:13 -0300</pubDate>
-      <guid>https://alitux.github.io/alituxblog/tags/odoo/</guid>
+      <guid>http://localhost:1313/tags/odoo/</guid>
       <description></description>
     </item>
     <item>
       <title>Sysadmin</title>
-      <link>https://alitux.github.io/alituxblog/tags/sysadmin/</link>
+      <link>http://localhost:1313/tags/sysadmin/</link>
       <pubDate>Mon, 27 Nov 2023 12:19:13 -0300</pubDate>
-      <guid>https://alitux.github.io/alituxblog/tags/sysadmin/</guid>
+      <guid>http://localhost:1313/tags/sysadmin/</guid>
       <description></description>
     </item>
     <item>
       <title>Markdown</title>
-      <link>https://alitux.github.io/alituxblog/tags/markdown/</link>
+      <link>http://localhost:1313/tags/markdown/</link>
       <pubDate>Tue, 07 Nov 2023 10:19:13 -0300</pubDate>
-      <guid>https://alitux.github.io/alituxblog/tags/markdown/</guid>
+      <guid>http://localhost:1313/tags/markdown/</guid>
       <description></description>
     </item>
     <item>
       <title>Telegram</title>
-      <link>https://alitux.github.io/alituxblog/tags/telegram/</link>
+      <link>http://localhost:1313/tags/telegram/</link>
       <pubDate>Tue, 07 Nov 2023 10:19:13 -0300</pubDate>
-      <guid>https://alitux.github.io/alituxblog/tags/telegram/</guid>
+      <guid>http://localhost:1313/tags/telegram/</guid>
       <description></description>
     </item>
   </channel>

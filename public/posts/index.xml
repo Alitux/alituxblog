@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Alitux</title>
-    <link>https://alitux.github.io/alituxblog/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Alitux</description>
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>Copyleft 2025. Nothing reserved. Feel free to share and share alike.</copyright>
     <lastBuildDate>Tue, 12 Nov 2024 11:19:13 -0300</lastBuildDate>
-    <atom:link href="https://alitux.github.io/alituxblog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tuneles Cloudflare Raspberry Pi</title>
-      <link>https://alitux.github.io/alituxblog/posts/tuneles-cloudflare-raspberry-pi/</link>
+      <link>http://localhost:1313/posts/tuneles-cloudflare-raspberry-pi/</link>
       <pubDate>Tue, 12 Nov 2024 11:19:13 -0300</pubDate>
-      <guid>https://alitux.github.io/alituxblog/posts/tuneles-cloudflare-raspberry-pi/</guid>
+      <guid>http://localhost:1313/posts/tuneles-cloudflare-raspberry-pi/</guid>
       <description>&lt;p&gt;Hace tiempo que vengo pensando como exponer a Internet servicios alojados localmente. En su momento hice un injerto con wireguard y una VPS que logró su cometido a costa de un rendimiento espantoso.&lt;/p&gt;&#xA;&lt;p&gt;Hace unos días se me ocurrió probar usando los túneles de Cloudflare y quedé gratamente sorprendido por la perfo y la sencillez. Acá les paso un Tuto tomando como modelo una Raspberry Pi 3 con Raspberry Pi OS en la que funciona un nextcloud sobre Docker. Acá les dejo el &lt;a href=&#34;https://gist.github.com/Alitux/c21f175a42ebddf7e838437570f5041d&#34;&gt;compose&lt;/a&gt; por si les interesa pero no lo hago parte del tuto porque excede el alcance&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nombres de Usuarios Únicos en Django</title>
-      <link>https://alitux.github.io/alituxblog/posts/usuarios-unicos-django/</link>
+      <link>http://localhost:1313/posts/usuarios-unicos-django/</link>
       <pubDate>Sat, 13 Jan 2024 11:19:13 -0300</pubDate>
-      <guid>https://alitux.github.io/alituxblog/posts/usuarios-unicos-django/</guid>
+      <guid>http://localhost:1313/posts/usuarios-unicos-django/</guid>
       <description>&lt;p&gt;La creación de nombres de usuarios autogenerados en Django no está implementada por defecto. Es por eso que escribí una simple función, que valiéndose de un CustomUser (No uso User por defecto ya que tengo un modelo personalizado que hereda sus propiedades desde AbstractUser) y tomando como entrada el primer nombre genera nombres de usuarios únicos no predecibles. Si bien no evita ataques por fuerza bruta, mitiga el uso de diccionarios con patrones comunes.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cambiar Título del Tab en Odoo 15</title>
-      <link>https://alitux.github.io/alituxblog/posts/cambiar-titulo-tab-odoo15/</link>
+      <link>http://localhost:1313/posts/cambiar-titulo-tab-odoo15/</link>
       <pubDate>Mon, 27 Nov 2023 12:19:13 -0300</pubDate>
-      <guid>https://alitux.github.io/alituxblog/posts/cambiar-titulo-tab-odoo15/</guid>
+      <guid>http://localhost:1313/posts/cambiar-titulo-tab-odoo15/</guid>
       <description>&lt;p&gt;Una cortita: Para cambiar el título «odoo» que aparece en el tab de Odoo y suponiendo que lo están corriendo en Docker, se debe ejecutar dentro del contenedor de Odoo:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/zopenerp: &amp;#34;Odoo&amp;#34;/zopenerp: &amp;#34;Tunuevotitulo&amp;#34;/&amp;#39;&lt;/span&gt; /usr/lib/python3/dist-packages/odoo/addons/web/static/src/webclient/webclient.js&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y si no queremos entrar al contenedor podemos hacer:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; -tiu root sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/zopenerp: &amp;#34;Odoo&amp;#34;/zopenerp: &amp;#34;Tunuevotitulo&amp;#34;/&amp;#39;&lt;/span&gt; /usr/lib/python3/dist-packages/odoo/addons/web/static/src/webclient/webclient.js&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;IMPORTANTE0:&lt;/strong&gt; No olvides en reemplazar Tunuevotitulo por el nombre quieras poner.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;IMPORTANTE1:&lt;/strong&gt; El cambio que no es permanente, esto quiere decir que si bajamos el contenedor y lo volvemos a levantar se vuelve todo a cero. Para hacer los cambios permanentes podríamos codear un addon o bien exponer toda la carpeta &lt;em&gt;/usr/lib/python3/dist-packages/odoo/addons/web/static/src/webclient&lt;/em&gt; como un volumen, pero no es una buena práctica y no lo sugiero mas que para safar o fines de desarrollo.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Parsear texto en Python para MarkdownV2 (API Telegram)</title>
-      <link>https://alitux.github.io/alituxblog/posts/parsear-texto-python-markdownv2-telegram/</link>
+      <link>http://localhost:1313/posts/parsear-texto-python-markdownv2-telegram/</link>
       <pubDate>Tue, 07 Nov 2023 10:19:13 -0300</pubDate>
-      <guid>https://alitux.github.io/alituxblog/posts/parsear-texto-python-markdownv2-telegram/</guid>
+      <guid>http://localhost:1313/posts/parsear-texto-python-markdownv2-telegram/</guid>
       <description>&lt;p&gt;Supongamos que se tiene el texto:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-code&#34; data-lang=&#34;code&#34;&gt;web#id=28&amp;amp;cids=1&amp;amp;menu_id=281&amp;amp;action=415&amp;amp;model=crm.lead&amp;amp;view_type=form&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Si uno intentara mandar el texto vía la API de Telegram la API respondería:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;ok&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;error_code&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;400&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Bad Request: can&amp;#39;t parse entities: Character &amp;#39;#&amp;#39; is reserved and must be escaped with the preceding &amp;#39;\\&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto es porque el carácter # es especial y hay que «escaparlo» o decirle a la API que no lo use para formatear texto. Para ello me armé la siguiente función que funciona de primera con todos los caracteres especiales:&lt;/p&gt;</description>
     </item>
   </channel>
