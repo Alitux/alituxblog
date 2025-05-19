@@ -9,7 +9,7 @@ tags = ["Django", "Python"]
 keywords = ["", ""]
 description = "Cómo crear nombres de usuarios autogenerados únicos en Django: Generá un nombre combinando datos del usuario o strings aleatorios y chequeá en la base de datos que no exista. Si ya está tomado, modificalo hasta que sea único antes de guardar el usuario."
 showFullContent = false
-readingTime = false
+readingTime = true
 hideComments = false
 +++
 

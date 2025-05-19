@@ -9,7 +9,7 @@ tags = ["Raspberry Pi", "Cloudflare"]
 keywords = ["", ""]
 description = "Configurar túneles de Cloudflare en una Raspberry Pi permite exponer servicios locales a Internet de forma segura sin abrir puertos."
 showFullContent = false
-readingTime = false
+readingTime = true
 hideComments = false
 draft = false
 +++

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+    <title>Tuneles Cloudflare en una Raspberry Pi :: Alitux</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Configurar túneles de Cloudflare en una Raspberry Pi permite exponer servicios locales a Internet de forma segura sin abrir puertos." />
+<meta name="keywords" content=", " />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="http://localhost:1313/posts/tuneles-cloudflare-raspberry-pi/tuneles-cloudflare-raspberry-pi/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terminal-retro.min.64c3dd32fe345b6180b13f583a34c708d480d1aaca5a3405c6ff478844741682.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/main.min.36833afd348409fc6c3d09d0897c5833d9d5bf1ff31f5e60ea3ee42ce2b1268c.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="http://localhost:1313/favicon.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="alituxtdf" />
+
+
+
+<meta property="og:locale" content="es" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Tuneles Cloudflare en una Raspberry Pi">
+<meta property="og:description" content="Configurar túneles de Cloudflare en una Raspberry Pi permite exponer servicios locales a Internet de forma segura sin abrir puertos." />
+<meta property="og:url" content="http://localhost:1313/posts/tuneles-cloudflare-raspberry-pi/tuneles-cloudflare-raspberry-pi/" />
+<meta property="og:site_name" content="Alitux" />
+
+  
+  
+  <meta property="og:image" content="http://localhost:1313/">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2024-11-12 11:19:13 -0300 -03" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container full">
+
+  <header class="header">
+    <link rel="icon" href="../../../favicon.png" type="image/png" />
+    <div class="header__inner">
+        <div class="header__logo">
+            <a href="../../../">
+  <div class="logo">
+    Alitux
+  </div>
+</a>
+
+        </div>
+        
+        <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="../../../acerca-de">De mí</a></li>
+        
+      
+        
+          <li><a href="../../../cv">CV</a></li>
+        
+      
+        
+          <li><a href="../../../contacto">Contacto</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+        
+        
+    </div>
+    
+    <p class="site-subtitle">Python, Odoo, Linux y DevOps con filosofía de Software Libre</p>
+    
+    
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="../../../acerca-de" >De mí</a></li>
+        
+      
+        
+          <li><a href="../../../cv" >CV</a></li>
+        
+      
+        
+          <li><a href="../../../contacto" >Contacto</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+    
+</header>
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="http://localhost:1313/posts/tuneles-cloudflare-raspberry-pi/tuneles-cloudflare-raspberry-pi/">Tuneles Cloudflare en una Raspberry Pi</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">12-11-2024&nbsp;[Updated:  12-11-2024]</time><span class="post-author">Alitux</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="http://localhost:1313/tags/raspberry-pi/">Raspberry Pi</a>&nbsp;
+      
+      #<a href="http://localhost:1313/tags/cloudflare/">Cloudflare</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>Hace tiempo que vengo pensando como exponer a Internet servicios alojados localmente. En su momento hice un injerto con wireguard y una VPS que logró su cometido a costa de un rendimiento espantoso.</p>
+<p>Hace unos días se me ocurrió probar usando los túneles de Cloudflare y quedé gratamente sorprendido por la perfo y la sencillez. Acá les paso un Tuto tomando como modelo una Raspberry Pi 3 con Raspberry Pi OS en la que funciona un nextcloud sobre Docker. Acá les dejo el <a href="https://gist.github.com/Alitux/c21f175a42ebddf7e838437570f5041d">compose</a> por si les interesa pero no lo hago parte del tuto porque excede el alcance</p>
+<ol>
+<li>Vamos a instalar Cloudflared en nuestra Raspi:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -L https://pkg.cloudflare.com/cloudflare-main.gpg <span class="p">|</span> sudo tee /usr/share/keyrings/cloudflare-archive-keyring.gpg &gt;/dev/null <span class="p">;</span> <span class="nb">echo</span> <span class="s2">&#34;deb [signed-by=/usr/share/keyrings/cloudflare-archive-keyring.gpg] https://pkg.cloudflare.com/cloudflared </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2"> main&#34;</span> <span class="p">|</span> sudo tee  /etc/apt/sources.list.d/cloudflared.list&lt;br&gt;sudo apt update<span class="p">;</span> sudo apt install cloudflared
+</span></span></code></pre></div><ol start="2">
+<li>Nos logueamos:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cloudflared tunnel login
+</span></span></code></pre></div><p>Ese comando nos abrirá un enlace que debemos abrir en nuestro navegador web para autenticar el dispositivo y vincularlo a algún dominio (Por ejemplo: Pirulito.com.ar)</p>
+<ol start="3">
+<li>Una vez logueados vamos a crear un tunel</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cloudflared tunnel create pirulito
+</span></span></code></pre></div><ol start="4">
+<li>Ahora vamos a crear un registro DNS para vincular el túnel al dominio. En mi caso me interesa utilizar el subdominio nextcloud.pirulito.com.ar</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cloudflared tunnel route dns pirulito nextcloud.pirulito.com.ar
+</span></span></code></pre></div><ol start="5">
+<li>Ahora viene lo copado, vamos a levantar el túnel y probar si funca. En este caso hemos levantado nextcloud en el puerto 8080.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cloudflared tunnel run --url localhost:8080 pirulito
+</span></span></code></pre></div><p>Si hiciste todo bien, al cabo de un minuto ya tendría que estar tu túnel levantado y podrías acceder a nextcloud.pirulito.com.ar desde cualquier lugar del mundo ¿Impresionante no? ¡CG-NAT Sucks!</p>
+<p>Bueno, el tema es que hacer eso último cada vez que reinicias, prendés o apagas la Raspi es una paja, por lo que vamos a crear un servicio.</p>
+<h2 id="creando-un-servicio-de-sistema">Creando un Servicio de Sistema<a href="#creando-un-servicio-de-sistema" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ol>
+<li>Creamos el yaml de configuración</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nano ~/.cloudflared/config.yml
+</span></span></code></pre></div><p>¿Se acuerdan el ID que se guardaron en el bolsillo? Bueno, ahora es momento de que salga a la cancha. Dentro del archivo pegamos el siguiente contenido:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">tunnel</span><span class="p">:</span><span class="w"> </span><span class="l">nextcloud</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">credentials-file</span><span class="p">:</span><span class="w"> </span><span class="l">/home/servidor/.cloudflared/id-en-tu-bolsillo.json</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">ingress</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l">nextcloud.alitux.com.ar</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l">http://localhost:8080</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l">http_status:404</span><span class="w">
+</span></span></span></code></pre></div><ul>
+<li>tunnel: va el nombre del túnel que asignamos al principio. (Paso 3)</li>
+<li>credentials-file: Tiene que quedar el path armadito con los datos de tu pi y el id que te guardaste en el bolsillo. Es mucho importante este pasito porque no se baila como tu quieres, se baila como se tiene que bailar.</li>
+<li>hostname: El dominio al que estará vinculado el tunel.</li>
+<li>service: Se especifica el protocolo, localhost y el puerto que vamos a vincular. El protocolo puede ser: http, https, unix, unix+tls,tcp, ssh o rdp.</li>
+</ul>
+<p>Guardamos todo con <em>CTRL+X</em> y creamos los servicios… Tranca que cloudflared tiene unas magias para que no lo tengamos que hacer a manopla.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo cloudflared --config ~/.cloudflared/config.yml service install<span class="p">;</span> sudo systemctl <span class="nb">enable</span> cloudflared<span class="p">;</span> sudo systemctl start cloudflared
+</span></span></code></pre></div><p>Y si todo sale bien ya deberíamos tener los servicios levantados como corresponde ¡Y listo el pollo!</p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Leer otros posteos</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+    
+    
+      <a href="http://localhost:1313/posts/usuarios-unicos-django/" class="button inline next">
+         [<span class="button__text">Nombres de Usuarios Únicos en Django</span>] &gt;
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+    <div class="footer__inner">
+        
+        <div class="copyright copyright--user">
+            <span>Copyleft 2025. Nothing reserved. Feel free to share and share alike.</span>
+            
+            </div>
+        </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="../../../bundle.min.js"></script>
+
+
+
+
+  
+</div>
+
+</body>
+</html>

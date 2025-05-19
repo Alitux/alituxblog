@@ -2,18 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sysadmin on Alitux</title>
-    <link>https://alitux.com.ar/tags/sysadmin/</link>
+    <link>http://localhost:1313/tags/sysadmin/</link>
     <description>Recent content in Sysadmin on Alitux</description>
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>Copyleft 2025. Nothing reserved. Feel free to share and share alike.</copyright>
-    <lastBuildDate>Mon, 27 Nov 2023 12:19:13 -0300</lastBuildDate>
-    <atom:link href="https://alitux.com.ar/tags/sysadmin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Dec 2023 11:19:13 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/sysadmin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Despliegue básico de Django con Docker, Traefik y CloudFlare</title>
+      <link>http://localhost:1313/posts/despliegue-basico-django-docker-traefik-cloudflare/</link>
+      <pubDate>Fri, 08 Dec 2023 11:19:13 -0300</pubDate>
+      <guid>http://localhost:1313/posts/despliegue-basico-django-docker-traefik-cloudflare/</guid>
+      <description>&lt;p&gt;En el momento del despliegue de aplicaciones Django se pueden optar por diversas opciones desde la clásica con una VPS, pasando por Heroku, AWS o bien Docker.&lt;/p&gt;&#xA;&lt;p&gt;En esta entrada voy a explicar cual es el método que aplico yo para desplegar una aplicación Django utilizando mi combinación ganadora en una VPS:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Docker&lt;/li&gt;&#xA;&lt;li&gt;Traefik&lt;/li&gt;&#xA;&lt;li&gt;CloudFlare&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Es un tutorial que se puede tornar confuso y complejo si no tenés mucha experiencia con el manejo de Docker. Tambien implica tener funcionando correctamente Traefik. En &lt;a href=&#34;https://gitlab.com/alitux/portainer-templates/-/blob/master/stacks/traefik/docker-compose.yml&#34;&gt;este enlace&lt;/a&gt; les dejo la configuración que uso yo. Sugiero que lo lean y en todo caso vean como lo adaptan a sus implementaciones.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Cambiar Título del Tab en Odoo 15</title>
-      <link>https://alitux.com.ar/posts/cambiar-titulo-tab-odoo15/</link>
+      <link>http://localhost:1313/posts/cambiar-titulo-tab-odoo15/</link>
       <pubDate>Mon, 27 Nov 2023 12:19:13 -0300</pubDate>
-      <guid>https://alitux.com.ar/posts/cambiar-titulo-tab-odoo15/</guid>
+      <guid>http://localhost:1313/posts/cambiar-titulo-tab-odoo15/</guid>
       <description>&lt;p&gt;Una cortita: Para cambiar el título «odoo» que aparece en el tab de Odoo y suponiendo que lo están corriendo en Docker, se debe ejecutar dentro del contenedor de Odoo:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/zopenerp: &amp;#34;Odoo&amp;#34;/zopenerp: &amp;#34;Tunuevotitulo&amp;#34;/&amp;#39;&lt;/span&gt; /usr/lib/python3/dist-packages/odoo/addons/web/static/src/webclient/webclient.js&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y si no queremos entrar al contenedor podemos hacer:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; -tiu root sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/zopenerp: &amp;#34;Odoo&amp;#34;/zopenerp: &amp;#34;Tunuevotitulo&amp;#34;/&amp;#39;&lt;/span&gt; /usr/lib/python3/dist-packages/odoo/addons/web/static/src/webclient/webclient.js&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;IMPORTANTE0:&lt;/strong&gt; No olvides en reemplazar Tunuevotitulo por el nombre quieras poner.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;IMPORTANTE1:&lt;/strong&gt; El cambio que no es permanente, esto quiere decir que si bajamos el contenedor y lo volvemos a levantar se vuelve todo a cero. Para hacer los cambios permanentes podríamos codear un addon o bien exponer toda la carpeta &lt;em&gt;/usr/lib/python3/dist-packages/odoo/addons/web/static/src/webclient&lt;/em&gt; como un volumen, pero no es una buena práctica y no lo sugiero mas que para safar o fines de desarrollo.&lt;/p&gt;</description>
     </item>
   </channel>

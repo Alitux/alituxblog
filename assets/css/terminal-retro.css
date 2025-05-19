@@ -59,3 +59,12 @@ hr {
     white-space: nowrap;
     text-align: left;
 }
+
+img {
+    display: block;
+    max-width: 100%;
+    border: none !important;
+    border-radius: var(--radius);
+    padding: 8px;
+    overflow: hidden
+}

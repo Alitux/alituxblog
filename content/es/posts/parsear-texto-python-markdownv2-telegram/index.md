@@ -8,7 +8,7 @@ tags = ["python", "markdown","telegram"]
 keywords = ["", ""]
 description = "Como parsear texto en Python para MarkdownV2 (API Telegram)"
 showFullContent = false
-readingTime = false
+readingTime = true
 hideComments = false
 draft = false
 +++

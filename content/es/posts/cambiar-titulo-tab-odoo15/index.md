@@ -9,7 +9,7 @@ tags = ["odoo", "python","sysadmin","docker"]
 keywords = ["", ""]
 description = "Como cambiar el título del tab de Odoo 15 en Docker"
 showFullContent = false
-readingTime = false
+readingTime = true
 hideComments = false
 draft = false
 +++
