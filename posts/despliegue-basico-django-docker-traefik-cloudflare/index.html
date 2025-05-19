@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+    <title>Despliegue básico de Django con Docker, Traefik y CloudFlare :: Alitux</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aprende a desplegar una aplicación Django de forma segura y escalable usando Docker para contenerización, Traefik como reverse proxy con certificados SSL automáticos, y Cloudflare para protección DDoS, caché y gestión de DNS. Este tutorial cubre la configuración paso a paso, incluyendo la integración con HTTPS, optimización de tráfico y solución de problemas comunes. Ideal para entornos de producción con alta disponibilidad." />
+<meta name="keywords" content=", " />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="http://localhost:1313/posts/despliegue-basico-django-docker-traefik-cloudflare/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terminal-retro.min.b28842aa78c9f2edfc14460e8ddea15c613a4b7c23f2de00dc0a4c42acb4f40a.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/main.min.36833afd348409fc6c3d09d0897c5833d9d5bf1ff31f5e60ea3ee42ce2b1268c.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="http://localhost:1313/favicon.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="alituxtdf" />
+
+
+
+<meta property="og:locale" content="es" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Despliegue básico de Django con Docker, Traefik y CloudFlare">
+<meta property="og:description" content="Aprende a desplegar una aplicación Django de forma segura y escalable usando Docker para contenerización, Traefik como reverse proxy con certificados SSL automáticos, y Cloudflare para protección DDoS, caché y gestión de DNS. Este tutorial cubre la configuración paso a paso, incluyendo la integración con HTTPS, optimización de tráfico y solución de problemas comunes. Ideal para entornos de producción con alta disponibilidad." />
+<meta property="og:url" content="http://localhost:1313/posts/despliegue-basico-django-docker-traefik-cloudflare/" />
+<meta property="og:site_name" content="Alitux" />
+
+  
+  
+  <meta property="og:image" content="http://localhost:1313/">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2023-12-08 11:19:13 -0300 -03" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container full">
+
+  <header class="header">
+    <link rel="icon" href="../../favicon.png" type="image/png" />
+    <div class="header__inner">
+        <div class="header__logo">
+            <a href="../../">
+  <div class="logo">
+    Alitux
+  </div>
+</a>
+
+        </div>
+        
+        <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="../../acerca-de">De mí</a></li>
+        
+      
+        
+          <li><a href="../../cv">CV</a></li>
+        
+      
+        
+          <li><a href="../../contacto">Contacto</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+        
+        
+    </div>
+    
+    <p class="site-subtitle">Python, Odoo, Linux y DevOps con filosofía de Software Libre</p>
+    
+    
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="../../acerca-de" >De mí</a></li>
+        
+      
+        
+          <li><a href="../../cv" >CV</a></li>
+        
+      
+        
+          <li><a href="../../contacto" >Contacto</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+    
+</header>
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="http://localhost:1313/posts/despliegue-basico-django-docker-traefik-cloudflare/">Despliegue básico de Django con Docker, Traefik y CloudFlare</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">08-12-2023&nbsp;[Updated:  08-12-2023]</time><span class="post-author">Alitux</span><span class="post-reading-time">6 minutos de lectura (1144 palabras)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="http://localhost:1313/tags/django/">django</a>&nbsp;
+      
+      #<a href="http://localhost:1313/tags/python/">python</a>&nbsp;
+      
+      #<a href="http://localhost:1313/tags/sysadmin/">sysadmin</a>&nbsp;
+      
+      #<a href="http://localhost:1313/tags/docker/">docker</a>&nbsp;
+      
+      #<a href="http://localhost:1313/tags/odoo/">odoo</a>&nbsp;
+      
+      #<a href="http://localhost:1313/tags/devops/">devops</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>En el momento del despliegue de aplicaciones Django se pueden optar por diversas opciones desde la clásica con una VPS, pasando por Heroku, AWS o bien Docker.</p>
+<p>En esta entrada voy a explicar cual es el método que aplico yo para desplegar una aplicación Django utilizando mi combinación ganadora en una VPS:</p>
+<ul>
+<li>Docker</li>
+<li>Traefik</li>
+<li>CloudFlare</li>
+</ul>
+<p>Es un tutorial que se puede tornar confuso y complejo si no tenés mucha experiencia con el manejo de Docker. Tambien implica tener funcionando correctamente Traefik. En <a href="https://gitlab.com/alitux/portainer-templates/-/blob/master/stacks/traefik/docker-compose.yml">este enlace</a> les dejo la configuración que uso yo. Sugiero que lo lean y en todo caso vean como lo adaptan a sus implementaciones.</p>
+<h2 id="la-previa">La Previa<a href="#la-previa" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Lo primero que debemos definir es que comprende nuestra aplicación Django:</p>
+<ul>
+<li>Base de datos</li>
+<li>Manejo de estáticos</li>
+<li>Etc.</li>
+</ul>
+<p>Para este caso vamos a suponer que la aplicación tiene los estáticos comunes y corrientes, y que a su vez usa una base de datos PostgreSQL.</p>
+<p>Tendremos una estructura básica de proyecto Django del tipo:</p>
+<pre tabindex="0"><code>/unaapp
+/miproyecto
+manage.py
+requirements.txt
+</code></pre><h2 id="metiendo-las-manos-en-el-barro">Metiendo las manos en el barro<a href="#metiendo-las-manos-en-el-barro" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Supongo que ya estás con tu ambiente activado y en la carpeta raíz del proyecto, si no es así, activalo ahora mismo porque vamos a instalar gunicorn, django-environ y whitenoise:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip install gunicorn django-environ whitenoise
+</span></span></code></pre></div><p>Freezamos las dependencias:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip freeze &gt; requirements.txt
+</span></span></code></pre></div><h3 id="dockerfile">Dockerfile<a href="#dockerfile" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Vamos a definir el Dockerfile que generará la imagen de nuestro proyecto, para ellos creamos un archivo Dockerfile con el siguiente contenido:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="k">FROM</span><span class="s"> python:3.11.0-alpine3.17</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">ENV</span> <span class="nv">PYTHONUNBUFFERED</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">RUN</span> apk update <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="o">&amp;&amp;</span> apk add --no-cache gcc musl-dev python3-dev libffi-dev <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="o">&amp;&amp;</span> pip install --upgrade pip<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> ./requirements.txt ./<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span>  pip install -r requirements.txt<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">ADD</span> . ./app<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /app</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># RUN python manage.py migrate</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># RUN python manage.py collectstatic --noinput</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">CMD</span> <span class="p">[</span><span class="s2">&#34;gunicorn&#34;</span><span class="p">,</span> <span class="s2">&#34;--bind&#34;</span><span class="p">,</span> <span class="s2">&#34;:8000&#34;</span><span class="p">,</span> <span class="s2">&#34;--workers&#34;</span><span class="p">,</span> <span class="s2">&#34;2&#34;</span><span class="p">,</span> <span class="s2">&#34;miproyecto.wsgi:application&#34;</span><span class="p">]</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 8000</span><span class="err">
+</span></span></span></code></pre></div><p><strong>Observen la anteúltima línea en la que damos entrada a gunicorn: el «miproyecto» es el nombre de nuestro proyecto. Seguramente el nombre de tu proyecto no es «miproyecto», cambialo por el tuyo. La cantidad de workers es igual a la cantidad de núcleos del procesador (No es regla general, hay que tener criterio y de última hacer pruebas de carga, pero para empezar está bien) 😛</strong></p>
+<h3 id="docker-composeyml-solo-por-puertos-sin-traefik">docker-compose.yml (Solo por puertos, sin traefik)<a href="#docker-composeyml-solo-por-puertos-sin-traefik" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Para empezar a laburar vamos a hacer una prueba sin Traefik, solo con puertos para comprobar que todo esté funcionando bien.</p>
+<p>El modelo que sugiero es el siguiente:</p>
+<pre tabindex="0"><code class="language-docker-compose" data-lang="docker-compose">
+# networks:
+  # traefik:
+    # external: true
+ 
+services:
+  db:
+    image: postgres:15.2-alpine
+    environment:
+      POSTGRES_USER: ${USER_DB}
+      POSTGRES_PASSWORD: ${PASSWORD_DB}
+      POSTGRES_DB: ${NAME_DB}
+    volumes:
+      - postgresql:/var/lib/postgresql/data
+    networks:
+      - default
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: valorarte
+    ports:
+      - &#34;8000:8000&#34;
+    networks:
+      - default
+    depends_on:
+      - db
+    restart: always
+      # - traefik
+    # labels:
+      # - traefik.enable=true
+      # - traefik.docker.network=traefik
+      # - traefik.http.routers.${TRAEFIK_NAME}.rule=Host(`${DOMAIN}`)||Host(`www.${DOMAIN}`)
+      # - traefik.http.routers.${TRAEFIK_NAME}.entrypoints=http
+      # - traefik.http.services.${TRAEFIK_NAME}-svc.loadbalancer.server.port=8000
+volumes:
+  postgresql:
+</code></pre><p>Como verán en ese archivo tenemos variables de entorno para el servicio <strong>db</strong> y las labels de traefik(Las que están comentadas porque estamos en local), las cuales definiremos junto a otras que usaremos después en un archivo .env</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-env" data-lang="env"><span class="line"><span class="cl"><span class="nv">SECRET_KEY</span><span class="o">=</span>fa3u<span class="o">)</span>zsxpl-xj5kswm48dd<span class="p">&amp;</span><span class="o">(</span><span class="c1">#v!lv^h!pej9zr_41v!_w#%0+w</span>
+</span></span><span class="line"><span class="cl"><span class="nv">PRODUCTION</span><span class="o">=</span>False
+</span></span><span class="line"><span class="cl"><span class="nv">TRAEFIK_NAME</span><span class="o">=</span>miproyecto
+</span></span><span class="line"><span class="cl"><span class="nv">DOMAIN</span><span class="o">=</span>proyecto.tudominio.com.ar
+</span></span><span class="line"><span class="cl"><span class="nv">GENERAL_DOMAIN</span><span class="o">=</span>tudominio.com.ar
+</span></span><span class="line"><span class="cl"><span class="nv">NAME_DB</span><span class="o">=</span>tudb
+</span></span><span class="line"><span class="cl"><span class="nv">USER_DB</span><span class="o">=</span>usuariodb
+</span></span><span class="line"><span class="cl"><span class="nv">PASSWORD_DB</span><span class="o">=</span>tupassword
+</span></span></code></pre></div><p>Si, me imagino que están ansiosos por levantar todo el stack y probar que funciona, pero hay algunos detalles que resolver relacionado con esas variables de entorno. Por defecto, uno por lo general desarrolla usando sqlite, por lo que debemos vincular Django con PostgreSQL dentro de <strong>settings.py</strong>. Para ello agregaremos las siguientes líneas:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">environ</span> <span class="c1">#Al principio del archivo</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">env</span> <span class="o">=</span> <span class="n">environ</span><span class="o">.</span><span class="n">Env</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">env_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;.env&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">env</span><span class="o">.</span><span class="n">read_env</span><span class="p">(</span><span class="n">env_file</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">env</span><span class="p">(</span><span class="s1">&#39;PRODUCTION&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&#34;True&#34;</span><span class="p">:</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">PRODUCTION</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">PRODUCTION</span> <span class="o">=</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">SECRET_KEY</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="s1">&#39;SECRET_KEY&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># SECRET_KEY = &#39;$%g!fflv0ezz*#jr%ui+3edvxx6l$ugh!6*kq(@9gsqu!7wla(&#39;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">DEBUG</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">PRODUCTION</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DEBUG</span> <span class="o">=</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DOMAIN</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="s1">&#39;DOMAIN&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">GENERAL_DOMAIN</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="s1">&#39;GENERAL_DOMAIN&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">NAME_DB</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="s1">&#39;NAME_DB&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">USER_DB</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="s1">&#39;USER_DB&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">PASSWORD_DB</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="s1">&#39;PASSWORD_DB&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;localhost&#34;</span><span class="p">,</span> <span class="n">DOMAIN</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                     <span class="sa">f</span><span class="s2">&#34;www.</span><span class="si">{</span><span class="n">DOMAIN</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">CSRF_COOKIE_DOMAIN</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;.</span><span class="si">{</span><span class="n">GENERAL_DOMAIN</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">CSRF_COOKIE_SECURE</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">    <span class="n">CSRF_TRUSTED_ORIGINS</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&#34;https://</span><span class="si">{</span><span class="n">DOMAIN</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                            <span class="sa">f</span><span class="s2">&#34;https://www.</span><span class="si">{</span><span class="n">DOMAIN</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="sa">f</span><span class="s2">&#34;http://</span><span class="si">{</span><span class="n">DOMAIN</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                            <span class="sa">f</span><span class="s2">&#34;http://www.</span><span class="si">{</span><span class="n">DOMAIN</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.db.backends.postgresql&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="n">NAME_DB</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;USER&#39;</span><span class="p">:</span> <span class="n">USER_DB</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="n">PASSWORD_DB</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;HOST&#39;</span><span class="p">:</span> <span class="s1">&#39;db&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;PORT&#39;</span><span class="p">:</span> <span class="s1">&#39;5432&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DEBUG</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;*&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.db.backends.sqlite3&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;db.sqlite3&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>También debemos agregar whitenoise en los middleware:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">MIDDLEWARE</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;django.middleware.security.SecurityMiddleware&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;whitenoise.middleware.WhiteNoiseMiddleware&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;django.contrib.sessions.middleware.SessionMiddleware&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;django.middleware.common.CommonMiddleware&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;django.middleware.csrf.CsrfViewMiddleware&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;django.contrib.auth.middleware.AuthenticationMiddleware&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;django.contrib.messages.middleware.MessageMiddleware&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;django.middleware.clickjacking.XFrameOptionsMiddleware&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span></code></pre></div><p>Y comprobar las rutas de los estáticos:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;static&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Pufff, ahora si, ya tenemos listo nuestro <strong>settings.py</strong> para despliegue en local y producción vinculado a un dominio. Ahora si, si se animan pueden probar el glorioso:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker compose up -d --build
+</span></span></code></pre></div><p>Si todo salió bien, cuando visten en su navegador <strong>http://localhost:8000</strong> deberían ver algo del proyecto. Digo «Algo» porque falta algunos pasitos importantes que algunos se habrán dado cuenta: Falta migrar la base de datos, colectar los estáticos y, en caso de que sea necesario, crear un superusuario.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker compose <span class="nb">exec</span> app python manage.py makemigrations
+</span></span><span class="line"><span class="cl">docker compose <span class="nb">exec</span> app python manage.py migrate
+</span></span><span class="line"><span class="cl">docker compose <span class="nb">exec</span> app python manage.py collectstatic
+</span></span><span class="line"><span class="cl">docker compose <span class="nb">exec</span> app python manage.py createsuperuser
+</span></span></code></pre></div><p><strong>¡FELICITACIONES! Tu proyecto está dockerizado ¡Nada mal!</strong></p>
+<h2 id="nos-vamos-a-producción">¡Nos vamos a Producción!<a href="#nos-vamos-a-producción" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Ya probaste que anda todo bien, ya viste que tu aplicación anda precioso en el contenedor, pero nos falta algo importante: Llevarlo a nuestra VPS y apuntarlo al dominio de alguna forma.</p>
+<p><img src="../../posts/despliegue-basico-django-docker-traefik-cloudflare/cloudflare1.png" alt="Cloudflare 1"></p>
+<p>Y la encriptación debe estar en <strong>Flexible</strong></p>
+<p><img src="../../posts/despliegue-basico-django-docker-traefik-cloudflare/cloudflare2.png" alt="Cloudflare 2"></p>
+<p>Ya tenemos el dominio apuntado, solo nos falta desplegar el proyecto en la VPS. 🙂</p>
+<h3 id="despliegue-en-vps">Despliegue en VPS<a href="#despliegue-en-vps" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Obviamente tenemos que entrar a la VPS de alguna forma y no es objeto del presente tutorial abordar ese tema, por lo que voy a suponer que ya estás en la VPS, que la misma tiene docker instalado y traefik corriendo de forma correcta.</p>
+<p>Si tenés el proyecto en Git, lo tendrás que clonar en algún lugar. También supongo que configuraste bien tu repo y dentro del .gitignore filtraste toda la data sensible (Entre ellos el .env de desarrollo ;)) o particular de la ejecución. Si no es así, es un buen momento para que le pegues una segunda mirada a todo.</p>
+<p>Dentro de la carpeta del proyecto crearemos un nuevo .env con el contenido similar al anterior:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-env" data-lang="env"><span class="line"><span class="cl"><span class="nv">SECRET_KEY</span><span class="o">=</span>qhkz_4!jjq<span class="p">&amp;</span>!*r-g2ijutl_4fj8x50ls<span class="o">=</span>v0^6<span class="o">)</span>ej18-e!zqdzq
+</span></span><span class="line"><span class="cl"><span class="nv">PRODUCTION</span><span class="o">=</span>True
+</span></span><span class="line"><span class="cl"><span class="nv">TRAEFIK_NAME</span><span class="o">=</span>miproyecto
+</span></span><span class="line"><span class="cl"><span class="nv">DOMAIN</span><span class="o">=</span>proyecto.tudominio.com.ar
+</span></span><span class="line"><span class="cl"><span class="nv">GENERAL_DOMAIN</span><span class="o">=</span>tudominio.com.ar
+</span></span><span class="line"><span class="cl"><span class="nv">NAME_DB</span><span class="o">=</span>tudb
+</span></span><span class="line"><span class="cl"><span class="nv">USER_DB</span><span class="o">=</span>usuariodb
+</span></span><span class="line"><span class="cl"><span class="nv">PASSWORD_DB</span><span class="o">=</span>tupassword
+</span></span></code></pre></div><p>Allí verán que <strong>PRODUCTION</strong> pasó a True por lo que ahora si usará PostgreSQL, se vinculará al dominio y se definirán otros parámetros para que todo funcione pipí cucú.</p>
+<p>En el compose <strong>DESCOMENTAMOS</strong> Todo lo que estaba comentado, por lo que el archivo quedará algo así:</p>
+<pre tabindex="0"><code class="language-docker-compose" data-lang="docker-compose">networks:
+  traefik:
+    external: true
+ 
+services:
+  db:
+    image: postgres:15.2-alpine
+    environment:
+      POSTGRES_USER: ${USER_DB}
+      POSTGRES_PASSWORD: ${PASSWORD_DB}
+      POSTGRES_DB: ${NAME_DB}
+    volumes:
+      - postgresql:/var/lib/postgresql/data
+    networks:
+      - default
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: lupin
+    ports:
+      - &#34;8000:8000&#34;
+    networks:
+      - default
+      - traefik
+    depends_on:
+      - db
+    restart: always
+       
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=traefik
+      - traefik.http.routers.${TRAEFIK_NAME}.rule=Host(`${DOMAIN}`)||Host(`www.${DOMAIN}`)
+      - traefik.http.routers.${TRAEFIK_NAME}.entrypoints=http
+      - traefik.http.services.${TRAEFIK_NAME}-svc.loadbalancer.server.port=8000
+volumes:
+  postgresql:
+</code></pre><p>Si todo está bien, entonces llegó el momento de…</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker compose up -d --build
+</span></span></code></pre></div><p>Vayan al dominio y deberían ver algo relacionado con su Proyecto. 🙂</p>
+<p>Si es así <strong>¡Felicitaciones!</strong> Ahora pueden hacer las migraciones, colectar los estáticos, crear el superuser y disfrutar. 🙂</p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Leer otros posteos</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="http://localhost:1313/posts/usuarios-unicos-django/" class="button inline prev">
+        &lt; [<span class="button__text">Nombres de Usuarios Únicos en Django</span>]
+      </a>
+    
+    
+      ::
+    
+    
+      <a href="http://localhost:1313/posts/cambiar-titulo-tab-odoo15/" class="button inline next">
+         [<span class="button__text">Cambiar Título del Tab en Odoo 15</span>] &gt;
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+    <div class="footer__inner">
+        
+        <div class="copyright copyright--user">
+            <span>Copyleft 2025. Nothing reserved. Feel free to share and share alike.</span>
+            
+            </div>
+        </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="../../bundle.min.js"></script>
+
+
+
+
+  
+</div>
+
+</body>
+</html>

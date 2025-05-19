@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+    <title>Parsear texto en Python para MarkdownV2 (API Telegram) :: Alitux</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Como parsear texto en Python para MarkdownV2 (API Telegram)" />
+<meta name="keywords" content=", " />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="http://localhost:1313/posts/parsear-texto-python-markdownv2-telegram/parsear-texto-python-markdownv2-telegram/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terminal-retro.min.64c3dd32fe345b6180b13f583a34c708d480d1aaca5a3405c6ff478844741682.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/main.min.36833afd348409fc6c3d09d0897c5833d9d5bf1ff31f5e60ea3ee42ce2b1268c.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="http://localhost:1313/favicon.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="alituxtdf" />
+
+
+
+<meta property="og:locale" content="es" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Parsear texto en Python para MarkdownV2 (API Telegram)">
+<meta property="og:description" content="Como parsear texto en Python para MarkdownV2 (API Telegram)" />
+<meta property="og:url" content="http://localhost:1313/posts/parsear-texto-python-markdownv2-telegram/parsear-texto-python-markdownv2-telegram/" />
+<meta property="og:site_name" content="Alitux" />
+
+  
+  
+  <meta property="og:image" content="http://localhost:1313/">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2023-11-07 10:19:13 -0300 -03" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container full">
+
+  <header class="header">
+    <link rel="icon" href="../../../favicon.png" type="image/png" />
+    <div class="header__inner">
+        <div class="header__logo">
+            <a href="../../../">
+  <div class="logo">
+    Alitux
+  </div>
+</a>
+
+        </div>
+        
+        <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="../../../acerca-de">De mí</a></li>
+        
+      
+        
+          <li><a href="../../../cv">CV</a></li>
+        
+      
+        
+          <li><a href="../../../contacto">Contacto</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+        
+        
+    </div>
+    
+    <p class="site-subtitle">Python, Odoo, Linux y DevOps con filosofía de Software Libre</p>
+    
+    
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="../../../acerca-de" >De mí</a></li>
+        
+      
+        
+          <li><a href="../../../cv" >CV</a></li>
+        
+      
+        
+          <li><a href="../../../contacto" >Contacto</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+    
+</header>
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="http://localhost:1313/posts/parsear-texto-python-markdownv2-telegram/parsear-texto-python-markdownv2-telegram/">Parsear texto en Python para MarkdownV2 (API Telegram)</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">07-11-2023&nbsp;[Updated:  07-11-2023]</time><span class="post-author">Alitux</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="http://localhost:1313/tags/python/">python</a>&nbsp;
+      
+      #<a href="http://localhost:1313/tags/markdown/">markdown</a>&nbsp;
+      
+      #<a href="http://localhost:1313/tags/telegram/">telegram</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>Supongamos que se tiene el texto:</p>
+<pre tabindex="0"><code class="language-code" data-lang="code">web#id=28&amp;cids=1&amp;menu_id=281&amp;action=415&amp;model=crm.lead&amp;view_type=form
+</code></pre><p>Si uno intentara mandar el texto vía la API de Telegram la API respondería:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;ok&#34;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="nt">&#34;error_code&#34;</span><span class="p">:</span><span class="mi">400</span><span class="p">,</span><span class="nt">&#34;description&#34;</span><span class="p">:</span><span class="s2">&#34;Bad Request: can&#39;t parse entities: Character &#39;#&#39; is reserved and must be escaped with the preceding &#39;\\&#39;&#34;</span><span class="p">}</span>
+</span></span></code></pre></div><p>Esto es porque el carácter # es especial y hay que «escaparlo» o decirle a la API que no lo use para formatear texto. Para ello me armé la siguiente función que funciona de primera con todos los caracteres especiales:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">markdownv2_parser</span><span class="p">(</span><span class="n">in_string</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Parsing MarkdownV2</span>
+</span></span><span class="line"><span class="cl">    <span class="n">SPECIAL_CHARS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="s1">&#39;[&#39;</span><span class="p">,</span> <span class="s1">&#39;]&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                     <span class="s1">&#39;(&#39;</span><span class="p">,</span> <span class="s1">&#39;)&#39;</span><span class="p">,</span> <span class="s1">&#39;~&#39;</span><span class="p">,</span> <span class="s1">&#39;`&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&amp;&#39;</span><span class="p">,</span> <span class="s1">&#39;#&#39;</span><span class="p">,</span> <span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;{&#39;</span><span class="p">,</span> <span class="s1">&#39;}&#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">SPECIAL_CHARS</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">in_string</span> <span class="o">=</span> <span class="n">in_string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">char</span><span class="p">,</span> <span class="s2">&#34;</span><span class="se">\\</span><span class="s2">&#34;</span> <span class="o">+</span> <span class="n">char</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">in_string</span>
+</span></span></code></pre></div><p>¡Y listo el pollo!</p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Leer otros posteos</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="http://localhost:1313/posts/cambiar-titulo-tab-odoo15/cambiar-titulo-tab-odoo15/" class="button inline prev">
+        &lt; [<span class="button__text">Cambiar Título del Tab en Odoo 15</span>]
+      </a>
+    
+    
+      ::
+    
+    
+      <a href="http://localhost:1313/posts/linea-con-devolucion-odoo-15/" class="button inline next">
+         [<span class="button__text">Agregar línea con devolución en Odoo 15</span>] &gt;
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+    <div class="footer__inner">
+        
+        <div class="copyright copyright--user">
+            <span>Copyleft 2025. Nothing reserved. Feel free to share and share alike.</span>
+            
+            </div>
+        </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="../../../bundle.min.js"></script>
+
+
+
+
+  
+</div>
+
+</body>
+</html>
