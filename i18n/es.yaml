@@ -1,2 +1,6 @@
 - id: builtWith
   translation: "Hecho con"
+- id: postsFor
+  translation: "Post para: #{{ .Term }}"
+- id: postsFor
+  translation: "Post para: #{{ .Term }}"

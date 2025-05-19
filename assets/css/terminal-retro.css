@@ -1,7 +1,7 @@
 /* Fondo negro, texto verde fosforescente */
 
 :root {
-    --background: #000000 !important;
+    --background: #0e0e0e !important;
     --foreground: #00ff00 !;
     --accent: #00ff00 !important;
 
@@ -21,7 +21,7 @@ a {
 nav,
 header,
 footer {
-    background-color: #000000;
+    background-color: #0e0e0e;
     color: #00ff00;
     border-color: #00ff00;
 }
@@ -39,7 +39,7 @@ h6 {
 /* Bloques de código */
 pre,
 code {
-    background-color: #000000;
+    background-color: #0e0e0e;
     color: #00ff00;
     border: 1px solid #00ff00;
 }

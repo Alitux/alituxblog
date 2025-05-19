@@ -2,81 +2,81 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Alitux</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://alitux.com.ar/tags/</link>
     <description>Recent content in Tags on Alitux</description>
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>Copyleft 2025. Nothing reserved. Feel free to share and share alike.</copyright>
     <lastBuildDate>Tue, 12 Nov 2024 11:19:13 -0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://alitux.com.ar/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cloudflare</title>
-      <link>http://localhost:1313/tags/cloudflare/</link>
+      <link>https://alitux.com.ar/tags/cloudflare/</link>
       <pubDate>Tue, 12 Nov 2024 11:19:13 -0300</pubDate>
-      <guid>http://localhost:1313/tags/cloudflare/</guid>
+      <guid>https://alitux.com.ar/tags/cloudflare/</guid>
       <description></description>
     </item>
     <item>
       <title>Raspberry Pi</title>
-      <link>http://localhost:1313/tags/raspberry-pi/</link>
+      <link>https://alitux.com.ar/tags/raspberry-pi/</link>
       <pubDate>Tue, 12 Nov 2024 11:19:13 -0300</pubDate>
-      <guid>http://localhost:1313/tags/raspberry-pi/</guid>
+      <guid>https://alitux.com.ar/tags/raspberry-pi/</guid>
       <description></description>
     </item>
     <item>
       <title>Django</title>
-      <link>http://localhost:1313/tags/django/</link>
+      <link>https://alitux.com.ar/tags/django/</link>
       <pubDate>Sat, 13 Jan 2024 11:19:13 -0300</pubDate>
-      <guid>http://localhost:1313/tags/django/</guid>
+      <guid>https://alitux.com.ar/tags/django/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>http://localhost:1313/tags/python/</link>
+      <link>https://alitux.com.ar/tags/python/</link>
       <pubDate>Sat, 13 Jan 2024 11:19:13 -0300</pubDate>
-      <guid>http://localhost:1313/tags/python/</guid>
+      <guid>https://alitux.com.ar/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>Devops</title>
-      <link>http://localhost:1313/tags/devops/</link>
+      <link>https://alitux.com.ar/tags/devops/</link>
       <pubDate>Fri, 08 Dec 2023 11:19:13 -0300</pubDate>
-      <guid>http://localhost:1313/tags/devops/</guid>
+      <guid>https://alitux.com.ar/tags/devops/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>http://localhost:1313/tags/docker/</link>
+      <link>https://alitux.com.ar/tags/docker/</link>
       <pubDate>Fri, 08 Dec 2023 11:19:13 -0300</pubDate>
-      <guid>http://localhost:1313/tags/docker/</guid>
+      <guid>https://alitux.com.ar/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Odoo</title>
-      <link>http://localhost:1313/tags/odoo/</link>
+      <link>https://alitux.com.ar/tags/odoo/</link>
       <pubDate>Fri, 08 Dec 2023 11:19:13 -0300</pubDate>
-      <guid>http://localhost:1313/tags/odoo/</guid>
+      <guid>https://alitux.com.ar/tags/odoo/</guid>
       <description></description>
     </item>
     <item>
       <title>Sysadmin</title>
-      <link>http://localhost:1313/tags/sysadmin/</link>
+      <link>https://alitux.com.ar/tags/sysadmin/</link>
       <pubDate>Fri, 08 Dec 2023 11:19:13 -0300</pubDate>
-      <guid>http://localhost:1313/tags/sysadmin/</guid>
+      <guid>https://alitux.com.ar/tags/sysadmin/</guid>
       <description></description>
     </item>
     <item>
       <title>Markdown</title>
-      <link>http://localhost:1313/tags/markdown/</link>
+      <link>https://alitux.com.ar/tags/markdown/</link>
       <pubDate>Tue, 07 Nov 2023 10:19:13 -0300</pubDate>
-      <guid>http://localhost:1313/tags/markdown/</guid>
+      <guid>https://alitux.com.ar/tags/markdown/</guid>
       <description></description>
     </item>
     <item>
       <title>Telegram</title>
-      <link>http://localhost:1313/tags/telegram/</link>
+      <link>https://alitux.com.ar/tags/telegram/</link>
       <pubDate>Tue, 07 Nov 2023 10:19:13 -0300</pubDate>
-      <guid>http://localhost:1313/tags/telegram/</guid>
+      <guid>https://alitux.com.ar/tags/telegram/</guid>
       <description></description>
     </item>
   </channel>
