@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  
+    <title>Conociendo Typer :: Alitux</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Al meterse en DevOps, automatizar tareas es clave y Python suele ser una gran herramienta. Aunque argparse es popular para CLI, su uso puede volverse engorroso en proyectos grandes. Ahí entra Typer, que permite escribir comandos limpios, con validaciones, tipado moderno y un enfoque más mantenible y modular para CLIs en Python." />
+<meta name="keywords" content=", " />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://alitux.com.ar/posts/porque-usar-typer/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="https://alitux.com.ar/css/terminal-retro.min.c843e66fe7d135dbbfd6dffe0e71ba99e9598612a47d150fbd7411a62c999d52.css">
+
+  
+  <link rel="stylesheet" href="https://alitux.com.ar/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="https://alitux.com.ar/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="https://alitux.com.ar/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="https://alitux.com.ar/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="https://alitux.com.ar/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://alitux.com.ar/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="https://alitux.com.ar/css/main.min.775ac2af004d44c22a6d000fbd1d9af529642f5cef27399d0280d180af2c2e9b.css">
+
+  
+  <link rel="stylesheet" href="https://alitux.com.ar/css/menu.min.310d32205bdedd6f43144e3c3273c9deecd238eba5f9108db5ea96ca0cfbe377.css">
+
+  
+  <link rel="stylesheet" href="https://alitux.com.ar/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="https://alitux.com.ar/css/post.min.ad50c7f4d00e7975918f37fc74c6029e1959a40d66fb5b2c6564a8715e985573.css">
+
+  
+  <link rel="stylesheet" href="https://alitux.com.ar/css/syntax.min.e9ab635cf918bc84b901eb65c0b2caa74c9544245e3647c1af5c129896ef276e.css">
+
+  
+  <link rel="stylesheet" href="https://alitux.com.ar/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="https://alitux.com.ar/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="https://alitux.com.ar/favicon.png">
+<link rel="apple-touch-icon" href="https://alitux.com.ar/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="alituxtdf" />
+
+
+
+<meta property="og:locale" content="es" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Conociendo Typer">
+<meta property="og:description" content="Al meterse en DevOps, automatizar tareas es clave y Python suele ser una gran herramienta. Aunque argparse es popular para CLI, su uso puede volverse engorroso en proyectos grandes. Ahí entra Typer, que permite escribir comandos limpios, con validaciones, tipado moderno y un enfoque más mantenible y modular para CLIs en Python." />
+<meta property="og:url" content="https://alitux.com.ar/posts/porque-usar-typer/" />
+<meta property="og:site_name" content="Alitux" />
+
+  
+  
+  <meta property="og:image" content="https://alitux.com.ar/">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2025-01-05 11:19:13 -0300 -03" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container full">
+
+  <header class="header">
+    <a rel="me" href="https://mastodon.la/@alitux">Mastodon</a>
+    <link rel="icon" href="../../favicon.png" type="image/png" />
+    <div class="header__inner">
+        <div class="header__logo">
+            <a href="../../">
+  <div class="logo">
+    Alitux
+  </div>
+</a>
+
+        </div>
+        
+        <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="../../acerca-de">De mí</a></li>
+        
+      
+        
+          <li><a href="../../cv">CV</a></li>
+        
+      
+        
+          <li><a href="../../contacto">Contacto</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+        
+        
+    </div>
+    
+    <p class="site-subtitle">Python, Odoo, Linux y DevOps con filosofía de Software Libre</p>
+    
+    
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="../../acerca-de" >De mí</a></li>
+        
+      
+        
+          <li><a href="../../cv" >CV</a></li>
+        
+      
+        
+          <li><a href="../../contacto" >Contacto</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+    
+</header>
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://alitux.com.ar/posts/porque-usar-typer/">Conociendo Typer</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">05-01-2025&nbsp;[Updated:  05-01-2025]</time><span class="post-author">Alitux</span><span class="post-reading-time">5 minutos de lectura (907 palabras)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://alitux.com.ar/tags/typer/">typer</a>&nbsp;
+      
+      #<a href="https://alitux.com.ar/tags/python/">python</a>&nbsp;
+      
+      #<a href="https://alitux.com.ar/tags/sysadmin/">sysadmin</a>&nbsp;
+      
+      #<a href="https://alitux.com.ar/tags/devops/">devops</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>Cuando se empieza a avanzar en el mundo devops siempre surge la necesidad de automatizar tareas y acá uno puede tirar de bash, de lua, de ruby, etc.
+En mi caso, trato de usar Python para casi todo lo que se pueda. Seguramente lo primero que vamos a encontrar es la libreria <a href="https://docs.python.org/3/library/argparse.html">argparse</a> que es una de las más usadas en Python. Sin embargo, aunque es muy potente y flexible, deja muchas cuestiones libradas al criterio del desarrollador y carece de una buena forma de hacer validaciones o el código a medida que crece tiende a enredarse un poco. Y aclaro para mi es una excelente opción para hacer un CLI cuando se trata de proyectos simples, pero al día de la fecha lo ideal es algo que nos permita crear y mantener un código limpio, modular y con estándares modernos. Y acá es donde entra Typer.</p>
+<h2 id="typer">Typer<a href="#typer" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<figure><img src="../../posts/porque-usar-typer/logo_typer.svg" width="200">
+</figure>
+
+<p><a href="https://typer.tiangolo.com/">Typer</a> es una librería creada por <a href="https://github.com/tiangolo">Sebastián Ramírez</a> que permite crear CLIs de forma sencilla y limpia. En lo personal creo que Typer no es solo una libreria, si no que lo veo de más parecido a un framework que cubre lo básico que buscamos siempre cuando armamos una CLI: Validaciones, argumentos, opciones, spinners, colores, etc. ¡Y todo eso viene built-in!</p>
+<p>Los que vengan del palo de <a href="https://fastapi.tiangolo.com/">FastAPI</a> notarán ciertos parecidos que agradecerán y que harán la curva de aprendizaje mucho mas rápida, ya que el desarrollador es el mismo y tuvo las mismas premisas para desarrollar Typer.</p>
+<p>Sin hablar mucho de mas tiro las principales características de Typer:</p>
+<ul>
+<li><strong>Documentación automática</strong>: Si, solamente comentando las funciones se crea la documentación. ❤️</li>
+<li><strong>Tipado Fuerte</strong>: Al utilizar <a href="https://pydantic-docs.helpmanual.io/">Pydantic</a> podemos crear tipos de datos que nos permiten validar los argumentos y opciones de nuestra CLI.</li>
+<li><strong>Apps de gran crecimiento</strong>: Typer es un framework que permite crear CLIs de forma modular y escalables de forma sencilla y ordenada</li>
+</ul>
+<p><strong>PD:</strong> Si quieren ver en mas profundidad pueden consultar la
+<a href="https://typer.tiangolo.com/tutorial/features/">Documentación oficial</a></p>
+<h2 id="a-los-bifes">A los bifes<a href="#a-los-bifes" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Este blog intenta ser un lugar práctico, la idea no es solo teorizar ni justificar porque una u otra herramienta, pero si embarrarnos las manos y aprender haciendo.</p>
+<h3 id="instalación">Instalación<a href="#instalación" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Supongo que ya tienen su ambiente creado y activado, si no lo hicieron pueden usar la herramienta que se les cante (virtualenv, pipenv, poetry, etc.). En mi caso particular como armo herramientas que ayudan a deploys o se suelen instalar dentro de contenedores me gusta usar <a href="https://python-poetry.org/">Poetry</a>.</p>
+<h3 id="si-usan-virtualenv">Si usan Virtualenv<a href="#si-usan-virtualenv" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip install typer
+</span></span></code></pre></div><h3 id="si-usan-poetry">Si usan Poetry<a href="#si-usan-poetry" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">poetry add typer
+</span></span></code></pre></div><h3 id="cli-simple-que-recibe-dos-argumentos">CLI Simple que recibe dos argumentos<a href="#cli-simple-que-recibe-dos-argumentos" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Me voy a alejar un poco del tutorial que propone Seba, porque mi idea es ir un poco al grano de lo que yo uso día a día. Si ven que voy a 2000 km/h, entonces sigan el <a href="https://typer.tiangolo.com/tutorial/first-steps/">tutorial oficial</a> que es excelente y mucho mas completo que el que voy a mostrar aquí.</p>
+<p>Primero creamos un archivo llamado <code>main.py</code> y dentro de él vamos a escribir lo siguiente:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">typer</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">app</span> <span class="o">=</span> <span class="n">typer</span><span class="o">.</span><span class="n">Typer</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@app.command</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">new</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">odoo_conf</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">typer</span><span class="o">.</span><span class="n">Argument</span><span class="p">(</span><span class="o">...</span><span class="p">,</span><span class="n">help</span><span class="o">=</span><span class="s2">&#34;Ruta donde se generará el nuevo odoo.conf&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">users</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">typer</span><span class="o">.</span><span class="n">Option</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&#34;Cantidad de usuarios concurrentes esperados&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Genera un nuevo archivo odoo.conf con configuraciones base&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Generando nuevo archivo </span><span class="si">{</span><span class="n">odoo_conf</span><span class="si">}</span><span class="s2"> para  </span><span class="si">{</span><span class="n">users</span><span class="si">}</span><span class="s2"> usuarios&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="p">()</span>
+</span></span></code></pre></div><p>Vamos a explicar un poco: Lo primero que hacemos es importar <strong>typer</strong> y desde typing importamos <strong>Optional</strong> ¿Por qué importamos este último? Simple, porque necesitamos una variable opcional.</p>
+<p>Luego creamos un objeto de tipo <strong>typer.Typer()</strong> que es lo que hace que nuestra CLI sea un CLI.</p>
+<p>Y ahora me gustaría que prestemos atención al decorador que agrego en la función <strong>new</strong>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@app.command</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">new</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span></code></pre></div><p>Lo que hace el decorador acá es decirle a typer <em>&ldquo;Ey, agregá esta función dentro de la app que acabamos de crear&rdquo;.</em>  Así de simple, sin muchas vueltas. Pero ahora se viene lo mas copado&hellip;</p>
+<p>Observemos atentamente la función <strong>new</strong> que acabamos de crear:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">odoo_conf</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">typer</span><span class="o">.</span><span class="n">Argument</span><span class="p">(</span><span class="o">...</span><span class="p">,</span><span class="n">help</span><span class="o">=</span><span class="s2">&#34;Ruta donde se generará el nuevo odoo.conf&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl"><span class="n">users</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">typer</span><span class="o">.</span><span class="n">Option</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&#34;Cantidad de usuarios concurrentes esperados&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Recibe dos argumentos:</p>
+<ul>
+<li>
+<p><strong>odoo_conf:</strong> Lo definimos como un string(str) y a su vez le decimos que será un argumento necesario (<em>typer.Argument(&hellip;)</em>) y a su vez escribimos su ayuda en la misma línea (<em>help=&ldquo;Ruta donde se generará el nuevo odoo.conf&rdquo;</em>)</p>
+</li>
+<li>
+<p><strong>users:</strong> Algo parecido pasa con este argumento&hellip; Lo definimos como un entero que será un argumento opcional (<em>Optional[int]</em>) y a su vez escribimos su ayuda en la misma línea (<em>help=&ldquo;Cantidad de usuarios concurrentes esperados&rdquo;</em>)</p>
+</li>
+</ul>
+<p>Seguimos analizando la función y nos encontramos con</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Genera un nuevo archivo odoo.conf con configuraciones base&#34;&#34;&#34;</span>
+</span></span></code></pre></div><p>Ese pedacito de comentario Typer lo tomará como documentación de nuestra CLI y nos lo mostrará cuando ejecutemos la utilidad con la opción &ndash;help. A su vez, cada argumento mostrará lo que definimos en <em>help=&ldquo;sarasaaaa&rdquo;</em>.</p>
+<p><strong>¿No les parece hermoso y simple a la vez que en tan poco código resolvamos tanto?</strong></p>
+<p>El <em>print</em> es solo para que muestre algo cuando reciba los dos argumentos, pero lo puse solo para no poner <em>pass</em> y no enredar el ejemplo con lógica 😄</p>
+<h2 id="conclusión">Conclusión<a href="#conclusión" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Hemos visto menos del 1% de lo que puede hacer Typer, pero se vendrán nuevas entradas en las que iré profundizando en el uso de Console, Colors, Spinners, etc. Les diría que adoptando Typer ya cubrís el 95% de las necesidades de un CLI moderno.</p>
+<p><strong>Si sos desarrollador Python y encima te dedicás a labores de infraestructura, Typer no puede faltar en tu caja de herramientas 🧰</strong></p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Leer otros posteos</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+    
+    
+      <a href="https://alitux.com.ar/posts/tuneles-cloudflare-raspberry-pi/" class="button inline next">
+         [<span class="button__text">Tuneles Cloudflare en una Raspberry Pi</span>] &gt;
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+    <div class="footer__inner">
+        
+        <div class="copyright copyright--user">
+            <span>Copyleft 2025. Nothing reserved. Feel free to share and share alike.</span>
+            
+            </div>
+        </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="../../bundle.min.js"></script>
+
+
+
+
+  
+</div>
+
+</body>
+</html>
