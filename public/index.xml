@@ -31,6 +31,13 @@
       <description>&lt;h2 id=&#34;formación-académica&#34;&gt;Formación Académica&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;2007–2017&lt;/strong&gt;&lt;br&gt;&#xA;&lt;strong&gt;Ingeniero en Pesca&lt;/strong&gt; con especialización en Captura, Universidad Tecnológica Nacional, Regional Tierra del Fuego, Ushuaia, Argentina.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;2000-2003&lt;/strong&gt;&lt;br&gt;&#xA;&lt;strong&gt;Técnico en Hidráulica&lt;/strong&gt;, Escuela Técnica de Hidráulica N° 4-112 &amp;ldquo;Antonio Gurgui&amp;rdquo;, Las Heras, Mendoza, Argentina.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;experiencia-laboral&#34;&gt;Experiencia Laboral&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;2021 - Presente&lt;/strong&gt;&lt;br&gt;&#xA;Desarrollador Fullstack y Sysadmin, Plataformas Tecnológicas del Sur, Argentina.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;2022 - Presente&lt;/strong&gt;&lt;br&gt;&#xA;Instructor de Desarrollo de Software (DJANGO &amp;amp; Python), Punto Digital – Municipalidad de Ushuaia, Argentina.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;2024 - 2025&lt;/strong&gt;&lt;br&gt;&#xA;DevOps y SysAdmin, Quilsoft, Argentina.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Conociendo Typer</title>
+      <link>https://alitux.com.ar/posts/porque-usar-typer/</link>
+      <pubDate>Sun, 05 Jan 2025 11:19:13 -0300</pubDate>
+      <guid>https://alitux.com.ar/posts/porque-usar-typer/</guid>
+      <description>&lt;p&gt;Cuando se empieza a avanzar en el mundo devops siempre surge la necesidad de automatizar tareas y acá uno puede tirar de bash, de lua, de ruby, etc.&#xA;En mi caso, trato de usar Python para casi todo lo que se pueda. Seguramente lo primero que vamos a encontrar es la libreria &lt;a href=&#34;https://docs.python.org/3/library/argparse.html&#34;&gt;argparse&lt;/a&gt; que es una de las más usadas en Python. Sin embargo, aunque es muy potente y flexible, deja muchas cuestiones libradas al criterio del desarrollador y carece de una buena forma de hacer validaciones o el código a medida que crece tiende a enredarse un poco. Y aclaro para mi es una excelente opción para hacer un CLI cuando se trata de proyectos simples, pero al día de la fecha lo ideal es algo que nos permita crear y mantener un código limpio, modular y con estándares modernos. Y acá es donde entra Typer.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Tuneles Cloudflare en una Raspberry Pi</title>
       <link>https://alitux.com.ar/posts/tuneles-cloudflare-raspberry-pi/</link>
       <pubDate>Tue, 12 Nov 2024 11:19:13 -0300</pubDate>
