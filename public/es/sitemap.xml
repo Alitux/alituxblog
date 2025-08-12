@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://alitux.com.ar/</loc>
-    <lastmod>2025-05-19T14:00:56-03:00</lastmod>
+    <lastmod>2025-08-12T16:17:54-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -13,6 +13,37 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://alitux.com.ar/"
+                />
+  </url><url>
+    <loc>https://alitux.com.ar/tags/docker/</loc>
+    <lastmod>2025-08-12T16:17:54-03:00</lastmod>
+  </url><url>
+    <loc>https://alitux.com.ar/posts/docker-python/docker-python/</loc>
+    <lastmod>2025-08-12T16:17:54-03:00</lastmod>
+  </url><url>
+    <loc>https://alitux.com.ar/tags/linux/</loc>
+    <lastmod>2025-08-12T16:17:54-03:00</lastmod>
+  </url><url>
+    <loc>https://alitux.com.ar/tags/odoo/</loc>
+    <lastmod>2025-08-12T16:17:54-03:00</lastmod>
+  </url><url>
+    <loc>https://alitux.com.ar/posts/</loc>
+    <lastmod>2025-08-12T16:17:54-03:00</lastmod>
+  </url><url>
+    <loc>https://alitux.com.ar/tags/python/</loc>
+    <lastmod>2025-08-12T16:17:54-03:00</lastmod>
+  </url><url>
+    <loc>https://alitux.com.ar/tags/</loc>
+    <lastmod>2025-08-12T16:17:54-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://alitux.com.ar/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://alitux.com.ar/tags/"
                 />
   </url><url>
     <loc>https://alitux.com.ar/contacto/</loc>
@@ -30,27 +61,8 @@
     <loc>https://alitux.com.ar/tags/devops/</loc>
     <lastmod>2025-01-05T11:19:13-03:00</lastmod>
   </url><url>
-    <loc>https://alitux.com.ar/posts/</loc>
-    <lastmod>2025-01-05T11:19:13-03:00</lastmod>
-  </url><url>
-    <loc>https://alitux.com.ar/tags/python/</loc>
-    <lastmod>2025-01-05T11:19:13-03:00</lastmod>
-  </url><url>
     <loc>https://alitux.com.ar/tags/sysadmin/</loc>
     <lastmod>2025-01-05T11:19:13-03:00</lastmod>
-  </url><url>
-    <loc>https://alitux.com.ar/tags/</loc>
-    <lastmod>2025-01-05T11:19:13-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://alitux.com.ar/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://alitux.com.ar/tags/"
-                />
   </url><url>
     <loc>https://alitux.com.ar/tags/typer/</loc>
     <lastmod>2025-01-05T11:19:13-03:00</lastmod>
@@ -71,12 +83,6 @@
     <lastmod>2024-01-13T11:19:13-03:00</lastmod>
   </url><url>
     <loc>https://alitux.com.ar/posts/despliegue-basico-django-docker-traefik-cloudflare/</loc>
-    <lastmod>2023-12-08T11:19:13-03:00</lastmod>
-  </url><url>
-    <loc>https://alitux.com.ar/tags/docker/</loc>
-    <lastmod>2023-12-08T11:19:13-03:00</lastmod>
-  </url><url>
-    <loc>https://alitux.com.ar/tags/odoo/</loc>
     <lastmod>2023-12-08T11:19:13-03:00</lastmod>
   </url><url>
     <loc>https://alitux.com.ar/posts/cambiar-titulo-tab-odoo15/</loc>

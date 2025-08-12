@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>Copyleft 2025. Nothing reserved. Feel free to share and share alike.</copyright>
-    <lastBuildDate>Fri, 08 Dec 2023 11:19:13 -0300</lastBuildDate>
+    <lastBuildDate>Tue, 12 Aug 2025 16:17:54 -0300</lastBuildDate>
     <atom:link href="https://alitux.com.ar/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interactuando con contenedores Docker desde Python</title>
+      <link>https://alitux.com.ar/posts/docker-python/docker-python/</link>
+      <pubDate>Tue, 12 Aug 2025 16:17:54 -0300</pubDate>
+      <guid>https://alitux.com.ar/posts/docker-python/docker-python/</guid>
+      <description>&lt;p&gt;Estoy trabajando en una herramienta DevOps enfocada al despliegue eficiente y simple de &lt;strong&gt;Odoo&lt;/strong&gt; en producción y desarrollo. Como framework general para interactuar con la misma estoy usando &lt;em&gt;Typer&lt;/em&gt; y mi idea inicial era que python fuera llamando los diferentes comandos necesarios usando una mezcla de subprocess y os. Todo iba muy lindo, pero a medida que el proyecto crecía (y sigue creciendo muchísimo) cai que usar subprocess, por ejemplo, para ejecutar un comando dentro de un contenedor, se hacia bastante engorroso, propenso a errores y además se me complicaba el el post procesamiento de las salidas. Y ahí es cuando me pregunté:&#xA;&lt;strong&gt;¿Existirá algo qué me permita interactuar con docker desde Python?&lt;/strong&gt; La respuesta es &lt;strong&gt;SI&lt;/strong&gt; y es el &lt;strong&gt;SDK oficial de Docker para Python&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Despliegue básico de Django con Docker, Traefik y CloudFlare</title>
       <link>https://alitux.com.ar/posts/despliegue-basico-django-docker-traefik-cloudflare/</link>
