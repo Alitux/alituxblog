@@ -52,11 +52,12 @@ services:
     image: traefik/whoami
     container_name: whoami
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.whoami.rule=Host(\"example.com\")"
-      - "traefik.http.routers.whoami.entrypoints=websecure"
-      - "traefik.http.routers.whoami.tls=true"
-      - "traefik.http.routers.whoami.tls.certresolver=letsencrypt"
+      - traefik.enable=true
+      - traefik.docker.network=traefik
+      - traefik.http.routers.whoami.rule=Host(\"example.com\")
+      - traefik.http.routers.whoami.entrypoints=websecure
+      - traefik.http.routers.whoami.tls=true
+      - traefik.http.routers.whoami.tls.certresolver=letsencrypt
     networks:
       - traefik
 ```
@@ -80,16 +81,21 @@ curl -vk https://example.com
 
 Obvio que el whoami se puede borrar, yo lo dejo por motivos didácticos. No es necesario levantar un traefik por cada servicio que quieras servir, con un solo traefik basta y sobra. Supongamos que el whoami está en otro lado, quedaría así: 
 ```yaml
+networks:
+  traefik:
+    external: true
+
 services:
   whoami:
     image: traefik/whoami
     container_name: whoami
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.whoami.rule=Host(\"example.com\")"
-      - "traefik.http.routers.whoami.entrypoints=websecure"
-      - "traefik.http.routers.whoami.tls=true"
-      - "traefik.http.routers.whoami.tls.certresolver=letsencrypt"
+      - traefik.enable=true
+      - traefik.docker.network=traefik
+      - traefik.http.routers.whoami.rule=Host(\"example.com\")
+      - traefik.http.routers.whoami.entrypoints=websecure
+      - traefik.http.routers.whoami.tls=true
+      - traefik.http.routers.whoami.tls.certresolver=letsencrypt
     networks:
       - traefik
 ```
