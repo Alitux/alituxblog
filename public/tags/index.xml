@@ -7,8 +7,50 @@
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>Copyleft 2025. Nothing reserved. Feel free to share and share alike.</copyright>
-    <lastBuildDate>Fri, 29 Aug 2025 19:49:54 -0300</lastBuildDate>
+    <lastBuildDate>Fri, 05 Sep 2025 10:49:54 -0300</lastBuildDate>
     <atom:link href="https://alitux.com.ar/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Desarrollo</title>
+      <link>https://alitux.com.ar/tags/desarrollo/</link>
+      <pubDate>Fri, 05 Sep 2025 10:49:54 -0300</pubDate>
+      <guid>https://alitux.com.ar/tags/desarrollo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://alitux.com.ar/tags/linux/</link>
+      <pubDate>Fri, 05 Sep 2025 10:49:54 -0300</pubDate>
+      <guid>https://alitux.com.ar/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Package</title>
+      <link>https://alitux.com.ar/tags/package/</link>
+      <pubDate>Fri, 05 Sep 2025 10:49:54 -0300</pubDate>
+      <guid>https://alitux.com.ar/tags/package/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pip</title>
+      <link>https://alitux.com.ar/tags/pip/</link>
+      <pubDate>Fri, 05 Sep 2025 10:49:54 -0300</pubDate>
+      <guid>https://alitux.com.ar/tags/pip/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pipx</title>
+      <link>https://alitux.com.ar/tags/pipx/</link>
+      <pubDate>Fri, 05 Sep 2025 10:49:54 -0300</pubDate>
+      <guid>https://alitux.com.ar/tags/pipx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://alitux.com.ar/tags/python/</link>
+      <pubDate>Fri, 05 Sep 2025 10:49:54 -0300</pubDate>
+      <guid>https://alitux.com.ar/tags/python/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Docker</title>
       <link>https://alitux.com.ar/tags/docker/</link>
@@ -24,13 +66,6 @@
       <description></description>
     </item>
     <item>
-      <title>Linux</title>
-      <link>https://alitux.com.ar/tags/linux/</link>
-      <pubDate>Fri, 29 Aug 2025 19:49:54 -0300</pubDate>
-      <guid>https://alitux.com.ar/tags/linux/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Traefik</title>
       <link>https://alitux.com.ar/tags/traefik/</link>
       <pubDate>Fri, 29 Aug 2025 19:49:54 -0300</pubDate>
@@ -42,13 +77,6 @@
       <link>https://alitux.com.ar/tags/odoo/</link>
       <pubDate>Tue, 12 Aug 2025 16:17:54 -0300</pubDate>
       <guid>https://alitux.com.ar/tags/odoo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>https://alitux.com.ar/tags/python/</link>
-      <pubDate>Tue, 12 Aug 2025 16:17:54 -0300</pubDate>
-      <guid>https://alitux.com.ar/tags/python/</guid>
       <description></description>
     </item>
     <item>

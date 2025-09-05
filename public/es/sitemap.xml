@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://alitux.com.ar/</loc>
-    <lastmod>2025-08-29T19:49:54-03:00</lastmod>
+    <lastmod>2025-09-05T10:49:54-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -15,20 +15,32 @@
                 href="https://alitux.com.ar/"
                 />
   </url><url>
-    <loc>https://alitux.com.ar/tags/docker/</loc>
-    <lastmod>2025-08-29T19:49:54-03:00</lastmod>
-  </url><url>
-    <loc>https://alitux.com.ar/tags/letsencrypt/</loc>
-    <lastmod>2025-08-29T19:49:54-03:00</lastmod>
+    <loc>https://alitux.com.ar/tags/desarrollo/</loc>
+    <lastmod>2025-09-05T10:49:54-03:00</lastmod>
   </url><url>
     <loc>https://alitux.com.ar/tags/linux/</loc>
-    <lastmod>2025-08-29T19:49:54-03:00</lastmod>
+    <lastmod>2025-09-05T10:49:54-03:00</lastmod>
+  </url><url>
+    <loc>https://alitux.com.ar/tags/package/</loc>
+    <lastmod>2025-09-05T10:49:54-03:00</lastmod>
+  </url><url>
+    <loc>https://alitux.com.ar/posts/paquete-python-editable/</loc>
+    <lastmod>2025-09-05T10:49:54-03:00</lastmod>
+  </url><url>
+    <loc>https://alitux.com.ar/tags/pip/</loc>
+    <lastmod>2025-09-05T10:49:54-03:00</lastmod>
+  </url><url>
+    <loc>https://alitux.com.ar/tags/pipx/</loc>
+    <lastmod>2025-09-05T10:49:54-03:00</lastmod>
   </url><url>
     <loc>https://alitux.com.ar/posts/</loc>
-    <lastmod>2025-08-29T19:49:54-03:00</lastmod>
+    <lastmod>2025-09-05T10:49:54-03:00</lastmod>
+  </url><url>
+    <loc>https://alitux.com.ar/tags/python/</loc>
+    <lastmod>2025-09-05T10:49:54-03:00</lastmod>
   </url><url>
     <loc>https://alitux.com.ar/tags/</loc>
-    <lastmod>2025-08-29T19:49:54-03:00</lastmod>
+    <lastmod>2025-09-05T10:49:54-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -40,6 +52,12 @@
                 href="https://alitux.com.ar/tags/"
                 />
   </url><url>
+    <loc>https://alitux.com.ar/tags/docker/</loc>
+    <lastmod>2025-08-29T19:49:54-03:00</lastmod>
+  </url><url>
+    <loc>https://alitux.com.ar/tags/letsencrypt/</loc>
+    <lastmod>2025-08-29T19:49:54-03:00</lastmod>
+  </url><url>
     <loc>https://alitux.com.ar/tags/traefik/</loc>
     <lastmod>2025-08-29T19:49:54-03:00</lastmod>
   </url><url>
@@ -50,9 +68,6 @@
     <lastmod>2025-08-12T16:17:54-03:00</lastmod>
   </url><url>
     <loc>https://alitux.com.ar/tags/odoo/</loc>
-    <lastmod>2025-08-12T16:17:54-03:00</lastmod>
-  </url><url>
-    <loc>https://alitux.com.ar/tags/python/</loc>
     <lastmod>2025-08-12T16:17:54-03:00</lastmod>
   </url><url>
     <loc>https://alitux.com.ar/contacto/</loc>

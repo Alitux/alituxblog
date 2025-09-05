@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pip on Alitux</title>
+    <link>https://alitux.com.ar/tags/pip/</link>
+    <description>Recent content in Pip on Alitux</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <copyright>Copyleft 2025. Nothing reserved. Feel free to share and share alike.</copyright>
+    <lastBuildDate>Fri, 05 Sep 2025 10:49:54 -0300</lastBuildDate>
+    <atom:link href="https://alitux.com.ar/tags/pip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paquetes Python en modo editable</title>
+      <link>https://alitux.com.ar/posts/paquete-python-editable/</link>
+      <pubDate>Fri, 05 Sep 2025 10:49:54 -0300</pubDate>
+      <guid>https://alitux.com.ar/posts/paquete-python-editable/</guid>
+      <description>&lt;p&gt;Como algunos ya saben, estoy trabajando en una herramienta que facilitará el despliegue y desarrollo de Odoo. La estoy codeando integramente en Python, valiéndome de Typer y el SDK de Docker. Sin embargo, mi flujo de laburo venía medio trabado en una etapa puntual: Básicamente codeaba, empaquetaba y después testeaba. La etapa de empaquetado me llevaba valiosos segundos, que en sucesivas iteraciones se trasnformaban en minutos. Es por ello que me puse a investigar alguna forma de hacer mas dinámico el desarrollo. Y ahí me encontré con el &lt;a href=&#34;https://peps.python.org/pep-0660/&#34;&gt;PEP 660&lt;/a&gt; que permite instalar paquetes en modo editable.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

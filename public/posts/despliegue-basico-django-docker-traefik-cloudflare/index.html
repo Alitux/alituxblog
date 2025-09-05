@@ -237,7 +237,7 @@ requirements.txt
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip freeze &gt; requirements.txt
 </span></span></code></pre></div><h3 id="dockerfile">Dockerfile<a href="#dockerfile" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>Vamos a definir el Dockerfile que generará la imagen de nuestro proyecto, para ellos creamos un archivo Dockerfile con el siguiente contenido:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="k">FROM</span><span class="s"> python:3.11.0-alpine3.17</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.11.0-alpine3.17</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">ENV</span> <span class="nv">PYTHONUNBUFFERED</span><span class="o">=</span><span class="m">1</span>
 </span></span><span class="line"><span class="cl"><span class="k">RUN</span> apk update <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="o">&amp;&amp;</span> apk add --no-cache gcc musl-dev python3-dev libffi-dev <span class="se">\
@@ -247,11 +247,11 @@ requirements.txt
 </span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span>  pip install -r requirements.txt<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">ADD</span> . ./app<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /app</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># RUN python manage.py migrate</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># RUN python manage.py collectstatic --noinput</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">CMD</span> <span class="p">[</span><span class="s2">&#34;gunicorn&#34;</span><span class="p">,</span> <span class="s2">&#34;--bind&#34;</span><span class="p">,</span> <span class="s2">&#34;:8000&#34;</span><span class="p">,</span> <span class="s2">&#34;--workers&#34;</span><span class="p">,</span> <span class="s2">&#34;2&#34;</span><span class="p">,</span> <span class="s2">&#34;miproyecto.wsgi:application&#34;</span><span class="p">]</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 8000</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">EXPOSE</span><span class="w"> </span><span class="s">8000</span><span class="err">
 </span></span></span></code></pre></div><p><strong>Observen la anteúltima línea en la que damos entrada a gunicorn: el «miproyecto» es el nombre de nuestro proyecto. Seguramente el nombre de tu proyecto no es «miproyecto», cambialo por el tuyo. La cantidad de workers es igual a la cantidad de núcleos del procesador (No es regla general, hay que tener criterio y de última hacer pruebas de carga, pero para empezar está bien) 😛</strong></p>
 <h3 id="docker-composeyml-solo-por-puertos-sin-traefik">docker-compose.yml (Solo por puertos, sin traefik)<a href="#docker-composeyml-solo-por-puertos-sin-traefik" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>Para empezar a laburar vamos a hacer una prueba sin Traefik, solo con puertos para comprobar que todo esté funcionando bien.</p>
