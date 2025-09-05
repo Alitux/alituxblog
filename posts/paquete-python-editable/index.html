@@ -2,16 +2,16 @@
 <html lang="es">
 <head>
   
-    <title>Linux :: Alitux</title>
+    <title>Paquetes Python en modo editable :: Alitux</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="" />
-<meta name="keywords" content="devops, docker, python, odoo, linux, free software, opensource" />
+<meta name="description" content="Hoy les explico como instalar paquetes python en modo editable, para facilitar el desarrollo de proyectos" />
+<meta name="keywords" content="python, pip, package, linux, desarrollo" />
 
   <meta name="robots" content="noodp" />
 
-<link rel="canonical" href="https://alitux.com.ar/tags/linux/" />
+<link rel="canonical" href="https://alitux.com.ar/posts/paquete-python-editable/" />
 
 
 
@@ -79,22 +79,24 @@
 
 
 <meta property="og:locale" content="es" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Linux">
-<meta property="og:description" content="" />
-<meta property="og:url" content="https://alitux.com.ar/tags/linux/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Paquetes Python en modo editable">
+<meta property="og:description" content="Hoy les explico como instalar paquetes python en modo editable, para facilitar el desarrollo de proyectos" />
+<meta property="og:url" content="https://alitux.com.ar/posts/paquete-python-editable/" />
 <meta property="og:site_name" content="Alitux" />
 
-  <meta property="og:image" content="https://alitux.com.ar/og-image.png">
+  
+  
+  <meta property="og:image" content="https://alitux.com.ar/">
 
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
 
 
+  <meta property="article:published_time" content="2025-09-05 10:49:54 -0300 -03" />
 
 
 
-  <link href="../../tags/linux/index.xml" rel="alternate" type="application/rss+xml" title="Alitux" />
 
 
 
@@ -178,132 +180,72 @@
 
   <div class="content">
     
-  <h1>Posts for: #Linux</h1>
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://alitux.com.ar/posts/paquete-python-editable/">Paquetes Python en modo editable</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">05-09-2025&nbsp;[Updated:  05-09-2025]</time><span class="post-author">Alitux</span><span class="post-reading-time">1 minutos de lectura (205 palabras)</span></div>
+
   
-  <div class="posts">
+    <span class="post-tags">
+      
+      #<a href="https://alitux.com.ar/tags/python/">python</a>&nbsp;
+      
+      #<a href="https://alitux.com.ar/tags/pip/">pip</a>&nbsp;
+      
+      #<a href="https://alitux.com.ar/tags/pipx/">pipx</a>&nbsp;
+      
+      #<a href="https://alitux.com.ar/tags/package/">package</a>&nbsp;
+      
+      #<a href="https://alitux.com.ar/tags/linux/">linux</a>&nbsp;
+      
+      #<a href="https://alitux.com.ar/tags/desarrollo/">desarrollo</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>Como algunos ya saben, estoy trabajando en una herramienta que facilitará el despliegue y desarrollo de Odoo. La estoy codeando integramente en Python, valiéndome de Typer y el SDK de Docker. Sin embargo, mi flujo de laburo venía medio trabado en una etapa puntual: Básicamente codeaba, empaquetaba y después testeaba. La etapa de empaquetado me llevaba valiosos segundos, que en sucesivas iteraciones se trasnformaban en minutos. Es por ello que me puse a investigar alguna forma de hacer mas dinámico el desarrollo. Y ahí me encontré con el <a href="https://peps.python.org/pep-0660/">PEP 660</a> que permite instalar paquetes en modo editable.</p>
+<p>Supongamos que queremos que el paquete editable debe estar disponible en el sistema y no en un entorno aislado. Para ello tenemos que seguir este simple procedimiento:</p>
+<p>Suponiendo que tenés que armado un paquete, nos paramos en la carpeta principal del proyecto y ejecutamos el siguiente comando:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pipx install --editable .
+</span></span></code></pre></div><p>Esto instalará el paquete en modo editable, y nos permitirá editar el código sin tener que volver a instalar el paquete.</p>
+<p>Luego se lo llama como se llama cualquier paquete instalado con pipx, por ejemplo:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mipaquete
+</span></span></code></pre></div><p>Y con eso ya podemos editar el código y probar nuestro trabajo sin tener que volver a instalar el paquete. 😎</p>
+
+      </div></div>
+
+  
     
-      <article class="post on-list">
-        <h1 class="post-title">
-          <a href="https://alitux.com.ar/posts/paquete-python-editable/">Paquetes Python en modo editable</a>
-        </h1>
-        <div class="post-meta"><time class="post-date">2025-09-05</time><span class="post-author">Alitux</span></div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="https://alitux.com.ar/tags/python/">python</a>&nbsp;
-            
-            #<a href="https://alitux.com.ar/tags/pip/">pip</a>&nbsp;
-            
-            #<a href="https://alitux.com.ar/tags/pipx/">pipx</a>&nbsp;
-            
-            #<a href="https://alitux.com.ar/tags/package/">package</a>&nbsp;
-            
-            #<a href="https://alitux.com.ar/tags/linux/">linux</a>&nbsp;
-            
-            #<a href="https://alitux.com.ar/tags/desarrollo/">desarrollo</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-
-        <div class="post-content">
-          
-            <p>Hoy les explico como instalar paquetes python en modo editable, para facilitar el desarrollo de proyectos</p>
-          
-        </div>
-
-        
-          <div>
-            <a class="read-more button inline" href="../../posts/paquete-python-editable/">[Leer más]</a>
-          </div>
-        
-      </article>
-    
-      <article class="post on-list">
-        <h1 class="post-title">
-          <a href="https://alitux.com.ar/posts/traefik-lets-encrypt/">Traefik, Let&rsquo;s Encrypt y https redirect</a>
-        </h1>
-        <div class="post-meta"><time class="post-date">2025-08-29</time><span class="post-author">Alitux</span></div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="https://alitux.com.ar/tags/traefik/">traefik</a>&nbsp;
-            
-            #<a href="https://alitux.com.ar/tags/letsencrypt/">letsencrypt</a>&nbsp;
-            
-            #<a href="https://alitux.com.ar/tags/docker/">docker</a>&nbsp;
-            
-            #<a href="https://alitux.com.ar/tags/linux/">linux</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-
-        <div class="post-content">
-          
-            <p>Hoy les paso rápidamente el docker-compose de traefik y letsencrypt con redireciconamiento de https a http</p>
-          
-        </div>
-
-        
-          <div>
-            <a class="read-more button inline" href="../../posts/traefik-lets-encrypt/">[Leer más]</a>
-          </div>
-        
-      </article>
-    
-      <article class="post on-list">
-        <h1 class="post-title">
-          <a href="https://alitux.com.ar/posts/docker-python/">Interactuando con contenedores Docker desde Python</a>
-        </h1>
-        <div class="post-meta"><time class="post-date">2025-08-12</time><span class="post-author">Alitux</span></div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="https://alitux.com.ar/tags/python/">python</a>&nbsp;
-            
-            #<a href="https://alitux.com.ar/tags/docker/">docker</a>&nbsp;
-            
-            #<a href="https://alitux.com.ar/tags/linux/">linux</a>&nbsp;
-            
-            #<a href="https://alitux.com.ar/tags/odoo/">odoo</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-
-        <div class="post-content">
-          
-            <p>Cómo usar el SDK oficial de Docker en Python para administrar Odoo de forma simple, limpia y sin comandos engorrosos.</p>
-          
-        </div>
-
-        
-          <div>
-            <a class="read-more button inline" href="../../posts/docker-python/">[Leer más]</a>
-          </div>
-        
-      </article>
-    
-
-    <div class="pagination">
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Leer otros posteos</span>
+    <hr />
+  </div>
   <div class="pagination__buttons">
     
     
     
+      <a href="https://alitux.com.ar/posts/traefik-lets-encrypt/" class="button inline next">
+         [<span class="button__text">Traefik, Let&#39;s Encrypt y https redirect</span>] &gt;
+      </a>
+    
   </div>
 </div>
 
-  </div>
+
+  
+
+  
+    
+
+  
+</article>
 
   </div>
 
